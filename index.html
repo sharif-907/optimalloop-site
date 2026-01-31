@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptimaLoop | Work that does itself</title>
+    <meta name="description"
+        content="AI Automation Agency optimizing operations, maximizing ROI, and reducing costs by up to 80%.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0A192F',
+                            light: '#112240',
+                            lighter: '#233554',
+                        },
+                        teal: {
+                            DEFAULT: '#64FFDA',
+                            dark: '#00BFA5',
+                        },
+                        cyan: '#00F5FF',
+                        lime: '#D7FF00',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .glass {
+            background: rgba(10, 25, 47, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #64FFDA 0%, #00F5FF 50%, #D7FF00 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-navy font-sans antialiased overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="Logo_Optimalloop_nobackground.png" alt="OptimaLoop Logo" class="h-8 w-auto">
+                <span class="text-white font-display font-bold text-xl tracking-tight">OptimaLoop</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#solutions" class="hover:text-teal transition-colors">Solutions</a>
+                <a href="#value" class="hover:text-teal transition-colors">Value</a>
+                <a href="#calculator" class="hover:text-teal transition-colors">ROI Calculator</a>
+            </div>
+            <a href="mailto:hello@optimalloop.ai"
+                class="bg-lime text-navy px-5 py-2 rounded-full font-bold text-sm hover:scale-105 transition-transform mr-2 md:mr-0">Get
+                Started</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center pt-20 bg-navy">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h1 class="text-5xl md:text-7xl font-display font-extrabold text-white leading-tight mb-6">
+                        Work <span class="gradient-text">that does itself.</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-10 max-w-lg leading-relaxed">
+                        Achieve 200–400% ROI through intelligent automation. We help small businesses, agencies, and
+                        enterprises optimize operations and reduce costs by up to 80%.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#solutions"
+                            class="bg-teal text-navy px-8 py-4 rounded-lg font-bold hover:shadow-lg hover:shadow-teal/20 transition-all">Explore
+                            Solutions</a>
+                        <a href="#calculator"
+                            class="border border-gray-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-white/5 transition-all">Calculate
+                            ROI</a>
+                    </div>
+                </div>
+                <div class="hidden md:block relative fade-in" style="animation-delay: 0.2s">
+                    <div class="absolute -inset-4 bg-teal/20 blur-3xl rounded-full"></div>
+                    <div class="relative bg-navy-light p-8 rounded-2xl border border-white/10 shadow-2xl">
+                        <div class="flex justify-between items-center mb-8">
+                            <div class="flex space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                            </div>
+                            <span class="text-xs text-gray-500 font-mono">Process: Optimization_Loop_v2.0</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="h-2 w-3/4 bg-gray-700 rounded transition-all duration-1000" id="bar1"></div>
+                            <div class="h-2 w-1/2 bg-gray-700 rounded transition-all duration-1000" id="bar2"></div>
+                            <div class="h-2 w-5/6 bg-gray-700 rounded transition-all duration-1000" id="bar3"></div>
+                            <div class="h-2 w-2/3 bg-teal/50 rounded animate-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scale-Specific Solutions -->
+        <section id="solutions" class="py-32 bg-white">
+            <div class="container mx-auto px-6 text-center mb-20 focus-target">
+                <h2 class="text-4xl font-display font-bold text-navy mb-4">Tailored Automation for Every Stage</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We don't believe in one-size-fits-all. Our solutions are
+                    built to match your specific scale and complexity.</p>
+            </div>
+            <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+                <!-- Small Business -->
+                <div
+                    class="p-8 rounded-2xl border border-gray-100 hover:border-teal hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-teal/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal group-hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Small Businesses</h3>
+                    <p class="text-gray-600 leading-relaxed">Streamlining routine work and establishing intelligent
+                        process consistency to let you focus on growth.</p>
+                </div>
+                <!-- Marketing Agencies -->
+                <div
+                    class="p-8 rounded-2xl border border-gray-100 hover:border-cyan hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-cyan/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan group-hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Marketing Agencies</h3>
+                    <p class="text-gray-600 leading-relaxed">Boosting campaign execution speed and audience targeting
+                        accuracy with proprietary AI frameworks.</p>
+                </div>
+                <!-- Enterprises -->
+                <div
+                    class="p-8 rounded-2xl border border-gray-100 hover:border-lime hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-lime/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-lime group-hover:text-navy transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Enterprises</h3>
+                    <p class="text-gray-600 leading-relaxed">Deep process optimization at scale with predictive
+                        analytics and cross-departmental automation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Value Pillars -->
+        <section id="value" class="py-32 bg-navy text-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20">
+                <div class="flex flex-col justify-center">
+                    <div class="bg-teal/20 text-teal px-4 py-1 rounded-full text-xs font-bold w-fit mb-6">REVENUE GROWTH
+                    </div>
+                    <h2 class="text-4xl font-display font-bold mb-6">Hyper-Personalization <br>at Scale</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                        We leverage AI-powered personalization to transform your outbound marketing. Turn cold leads
+                        into warm conversations by tailoring every touchpoint to the individual.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>3x Increase in response rates</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Automated lead scoring & qualification</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <div class="bg-lime/20 text-lime px-4 py-1 rounded-full text-xs font-bold w-fit mb-6">COST
+                        EFFICIENCY</div>
+                    <h2 class="text-4xl font-display font-bold mb-6">80% Reduction in <br>Manual Labor</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                        Eliminate manual data entry and routine administration. We build custom loops that handle the
+                        repetitive tasks, freeing your team for high-value work.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Zero-error data processing</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>24/7 autonomous operations</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI Calculator -->
+        <section id="calculator" class="py-32 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="bg-gray-50 rounded-3xl p-12 shadow-inner border border-gray-100">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-display font-bold text-navy mb-4">Potential Savings Calculator</h2>
+                        <p class="text-gray-600">See how much time and money OptimaLoop can save you.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="space-y-8">
+                            <div>
+                                <label class="block text-sm font-bold text-navy mb-4">Monthly Labor Hours (Manual
+                                    Tasks)</label>
+                                <input type="range" min="10" max="1000" value="160" class="w-full accent-teal"
+                                    id="hoursInput">
+                                <div class="flex justify-between text-[10px] md:text-xs text-gray-500 mt-2">
+                                    <span>10h</span>
+                                    <span id="hoursDisplay" class="font-bold text-navy text-xs md:text-sm">160h</span>
+                                    <span>1000h</span>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-navy mb-4">Average Hourly Rate ($)</label>
+                                <input type="number" value="50"
+                                    class="w-full p-3 rounded-lg border border-gray-300 focus:border-teal outline-none"
+                                    id="rateInput">
+                            </div>
+                        </div>
+                        <div class="bg-navy rounded-2xl p-8 text-white flex flex-col justify-center text-center">
+                            <span class="text-teal text-sm font-bold uppercase tracking-widest mb-2">Estimated Annual
+                                Savings</span>
+                            <div class="text-5xl font-display font-extrabold mb-4" id="savingsDisplay">$153,600</div>
+                            <p class="text-gray-400 text-sm">Based on 80% automation efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-6 flex flex-col md:row justify-between items-center text-gray-500 text-sm">
+            <div class="flex items-center space-x-2 mb-6 md:mb-0">
+                <div class="w-6 h-6 rounded-full bg-gradient-to-br from-teal to-lime"></div>
+                <span class="text-navy font-display font-bold">OptimaLoop</span>
+            </div>
+            <div class="flex space-x-8 mb-6 md:mb-0">
+                <a href="#" class="hover:text-navy transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-navy transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-navy transition-colors">LinkedIn</a>
+                <a href="#" class="hover:text-navy transition-colors">X (Twitter)</a>
+            </div>
+            <div>&copy; 2026 OptimaLoop. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // ROI Calculator Logic
+        const hoursInput = document.getElementById('hoursInput');
+        const rateInput = document.getElementById('rateInput');
+        const hoursDisplay = document.getElementById('hoursDisplay');
+        const savingsDisplay = document.getElementById('savingsDisplay');
+
+        function calculateSavings() {
+            const hours = parseInt(hoursInput.value);
+            const rate = parseInt(rateInput.value) || 0;
+            hoursDisplay.innerText = hours + 'h';
+
+            // Formula: (Hours * Rate * 12 months) * 80% efficiency
+            const annualCost = hours * rate * 12;
+            const savings = Math.round(annualCost * 0.8);
+
+            savingsDisplay.innerText = '$' + savings.toLocaleString();
+        }
+
+        hoursInput.addEventListener('input', calculateSavings);
+        rateInput.addEventListener('input', calculateSavings);
+
+        // Animated Bar placeholders in Hero
+        setInterval(() => {
+            const bars = ['bar1', 'bar2', 'bar3'];
+            bars.forEach(id => {
+                const bar = document.getElementById(id);
+                const width = Math.floor(Math.random() * 60) + 40;
+                bar.style.width = width + '%';
+            });
+        }, 3000);
+
+        // Intersection Observer for fade-in elements
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
