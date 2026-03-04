@@ -68,6 +68,10 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 
@@ -81,9 +85,10 @@
                 <span class="text-white font-display font-bold text-xl tracking-tight">OptimaLoop</span>
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#expertise" class="hover:text-teal transition-colors">Expertise</a>
                 <a href="#solutions" class="hover:text-teal transition-colors">Solutions</a>
-                <a href="#value" class="hover:text-teal transition-colors">Value</a>
-                <a href="#calculator" class="hover:text-teal transition-colors">ROI Calculator</a>
+                <a href="#process" class="hover:text-teal transition-colors">Process</a>
+                <a href="#founder" class="hover:text-teal transition-colors">About</a>
             </div>
             <a href="https://cal.com/sharif-6p34nh/30min"
                 class="bg-lime text-navy px-5 py-2 rounded-full font-bold text-sm hover:scale-105 transition-transform mr-2 md:mr-0">Book
@@ -130,6 +135,100 @@
                             <div class="h-2 w-2/3 bg-teal/50 rounded animate-pulse"></div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Showcase -->
+        <section id="expertise" class="py-24 bg-navy-light relative overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                    <div class="max-w-2xl">
+                        <h2 class="text-teal font-bold uppercase tracking-widest text-sm mb-4">Core Capabilities</h2>
+                        <h3 class="text-4xl md:text-5xl font-display font-bold text-white">Full-Stack Automation <br>&
+                            Digital Infrastructure.</h3>
+                    </div>
+                    <p class="text-gray-400 max-w-sm mb-2">If it can be built in Make or n8n, we can build it. From
+                        agentic reasoning to robust project management systems.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Agentic Workflows -->
+                    <div
+                        class="bg-navy p-8 rounded-2xl border border-white/5 hover:border-teal/50 transition-all group">
+                        <div
+                            class="w-12 h-12 bg-teal/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-3">Agentic Workflows</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Multi-step AI reasoning loops that think,
+                            adapt, and execute complex business decisions autonomously.</p>
+                    </div>
+
+                    <!-- PM Automation -->
+                    <div
+                        class="bg-navy p-8 rounded-2xl border border-white/5 hover:border-cyan/50 transition-all group">
+                        <div
+                            class="w-12 h-12 bg-cyan/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-3">PM Systems</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Advanced automation for Asana, Monday, and
+                            Trello. Synchronized data across your entire project stack.</p>
+                    </div>
+
+                    <!-- Make/n8n Architecture -->
+                    <div
+                        class="bg-navy p-8 rounded-2xl border border-white/5 hover:border-lime/50 transition-all group">
+                        <div
+                            class="w-12 h-12 bg-lime/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6 text-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-3">Custom Loops</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Complex deterministic logic built in Make.com
+                            and n8n. Reliable, scalable, and built for edge cases.</p>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div
+                        class="bg-navy p-8 rounded-2xl border border-white/5 hover:border-white/50 transition-all group">
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-3">Digital Presence</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">High-performance SaaS websites, custom
+                            dashboards, and client portals integrated with your backend.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="py-12 border-y border-white/5 bg-navy">
+            <div class="container mx-auto px-6 overflow-hidden">
+                <div
+                    class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+                    <span class="text-white font-display font-black text-2xl tracking-tighter">MAKE.COM</span>
+                    <span class="text-white font-display font-black text-2xl tracking-tighter">N8N.IO</span>
+                    <span class="text-white font-display font-black text-2xl tracking-tighter">OPENAI</span>
+                    <span class="text-white font-display font-black text-2xl tracking-tighter">ASANA</span>
+                    <span class="text-white font-display font-black text-2xl tracking-tighter">MONDAY</span>
+                    <span class="text-white font-display font-black text-2xl tracking-tighter">ANTHROPIC</span>
                 </div>
             </div>
         </section>
@@ -246,6 +345,49 @@
             </div>
         </section>
 
+        <!-- Our Process -->
+        <section id="process" class="py-32 bg-white text-navy">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20">
+                    <h2 class="text-teal font-bold uppercase tracking-widest text-sm mb-4">How We Work</h2>
+                    <h3 class="text-4xl font-display font-bold text-navy">The Optimization Loop</h3>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-12 relative">
+                    <!-- Step 1 -->
+                    <div class="relative z-10 text-center px-4">
+                        <div
+                            class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-navy text-teal text-2xl font-display font-bold mb-8 border-4 border-gray-50">
+                            01</div>
+                        <h4 class="text-xl font-bold mb-4 text-navy">Strategic Discovery</h4>
+                        <p class="text-gray-600">We analyze your bottlenecks and map out a high-ROI automation blueprint
+                            tailored to your stack.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative z-10 text-center px-4">
+                        <div
+                            class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-navy text-cyan text-2xl font-display font-bold mb-8 border-4 border-gray-50">
+                            02</div>
+                        <h4 class="text-xl font-bold mb-4 text-navy">Rapid Integration</h4>
+                        <p class="text-gray-600">Our engineers build and deploy your custom loops in Make, n8n, or
+                            custom code with minimal disruption.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative z-10 text-center px-4">
+                        <div
+                            class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-navy text-lime text-2xl font-display font-bold mb-8 border-4 border-gray-50">
+                            03</div>
+                        <h4 class="text-xl font-bold mb-4 text-navy">Infinite Scaling</h4>
+                        <p class="text-gray-600">We monitor, optimize, and expand your systems to handle growth while
+                            your overhead stays flat.</p>
+                    </div>
+
+                    <!-- Connecting Line -->
+                    <div class="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-gray-100 -z-0"></div>
+                </div>
+            </div>
+        </section>
+
         <!-- Reviews Section -->
         <section class="py-32 bg-gray-50">
             <div class="container mx-auto px-6">
@@ -283,6 +425,58 @@
                     <a href="https://cal.com/sharif-6p34nh/30min"
                         class="bg-navy text-white px-10 py-4 rounded-full font-bold hover:bg-navy-light transition-all">Start
                         Your Optimization Loop</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet the Founder -->
+        <section id="founder" class="py-32 bg-navy text-white overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-teal/5 skew-x-12 translate-x-1/2"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid md:grid-cols-2 gap-16 items-center flex flex-col md:flex-row">
+                    <div class="relative group order-2 md:order-1">
+                        <div
+                            class="absolute -inset-4 bg-gradient-to-tr from-teal to-lime opacity-20 blur-2xl rounded-full group-hover:opacity-40 transition-opacity">
+                        </div>
+                        <div
+                            class="relative aspect-square rounded-3xl overflow-hidden border border-white/10 bg-navy-light max-w-md mx-auto">
+                            <!-- Placeholder for founder photo - user can replace this easily -->
+                            <div class="w-full h-full flex items-center justify-center bg-navy-light text-gray-700">
+                                <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <h2 class="text-teal font-bold uppercase tracking-widest text-sm mb-4">Meet the Architect</h2>
+                        <h3 class="text-4xl font-display font-bold mb-8 text-white">Personalized Innovation <br>by
+                            Sharif.
+                        </h3>
+                        <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                            I specialize in bridging the gap between complex business needs and deterministic
+                            automation.
+                            Whether it's building high-performance SaaS websites, complex Project Management systems
+                            (Asana, Monday), or cutting-edge Agentic Workflows—if it can be imagined in Make or n8n, I
+                            can build it.
+                        </p>
+                        <p class="text-gray-400 text-lg leading-relaxed mb-10">
+                            At OptimaLoop, we don't just sell tools; we architect solutions that scale with your
+                            ambition.
+                        </p>
+                        <div class="flex items-center space-x-6">
+                            <a href="https://www.linkedin.com/in/sharif-mohamed-sharif-bb3091176/" target="_blank"
+                                class="text-white hover:text-teal transition-colors flex items-center space-x-2">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                                <span class="font-bold">Connect on LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
