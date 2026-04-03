@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OptimalLoop | Work that does itself</title>
+    <meta name="description"
+        content="AI Automation Agency optimizing operations, maximizing ROI, and reducing costs by up to 80%.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            DEFAULT: '#0A192F',
+                            light: '#112240',
+                            lighter: '#233554',
+                        },
+                        teal: {
+                            DEFAULT: '#64FFDA',
+                            dark: '#00BFA5',
+                        },
+                        cyan: '#00F5FF',
+                        lime: '#D7FF00',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .glass {
+            background: rgba(10, 25, 47, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #64FFDA 0%, #00F5FF 50%, #D7FF00 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-navy font-sans antialiased overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="gradient-text font-display font-extrabold text-2xl tracking-tight">OptimalLoop</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="#expertise" class="hover:text-teal transition-colors">Expertise</a>
+                <a href="#solutions" class="hover:text-teal transition-colors">Solutions</a>
+                <a href="#process" class="hover:text-teal transition-colors">Process</a>
+                <a href="#founder" class="hover:text-teal transition-colors">About</a>
+                <a href="#case-studies" class="hover:text-teal transition-colors">Case Studies</a>
+                <a href="#contact" class="hover:text-teal transition-colors">Contact</a>
+            </div>
+            <a href="https://cal.com/sharif-6p34nh/30min"
+                class="bg-lime text-navy px-5 py-2 rounded-full font-bold text-sm hover:scale-105 transition-transform mr-2 md:mr-0">Book
+                a Call</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center pt-20 bg-navy">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h1 class="text-5xl md:text-7xl font-display font-extrabold text-white leading-tight mb-6">
+                        Work <span class="gradient-text">that does itself.</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-4 max-w-lg leading-relaxed">
+                        Achieve 200–400% ROI through intelligent automation. We help small businesses, agencies, and
+                        enterprises optimize operations and reduce costs by up to 80%.
+                    </p>
+                    <p class="text-sm text-teal mb-10"><a href="#case-studies" class="hover:underline">1,000+ hours saved across clients — see real results →</a></p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="https://cal.com/sharif-6p34nh/30min"
+                            class="bg-teal text-navy px-8 py-4 rounded-lg font-bold hover:shadow-lg hover:shadow-teal/20 transition-all text-center">Book
+                            a Strategy Session</a>
+                        <a href="#calculator"
+                            class="border border-gray-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-white/5 transition-all text-center">ROI
+                            Calculator</a>
+                    </div>
+                </div>
+                <div class="hidden md:block relative fade-in" style="animation-delay: 0.2s">
+                    <div class="absolute -inset-4 bg-teal/20 blur-3xl rounded-full"></div>
+                    <div class="relative bg-navy-light p-8 rounded-2xl border border-white/10 shadow-2xl">
+                        <div class="flex justify-between items-center mb-8">
+                            <div class="flex space-x-2">
+                                <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+                            </div>
+                            <span class="text-xs text-gray-500 font-mono">Process: Optimization_Loop_v2.0</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="h-2 w-3/4 bg-gray-700 rounded transition-all duration-1000" id="bar1"></div>
+                            <div class="h-2 w-1/2 bg-gray-700 rounded transition-all duration-1000" id="bar2"></div>
+                            <div class="h-2 w-5/6 bg-gray-700 rounded transition-all duration-1000" id="bar3"></div>
+                            <div class="h-2 w-2/3 bg-teal/50 rounded animate-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Showcase -->
+        <section id="expertise" class="py-24 bg-navy-light relative overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                    <div class="max-w-2xl">
+                        <h2 class="text-teal font-bold uppercase tracking-widest text-sm mb-4">Core Capabilities</h2>
+                        <h3 class="text-4xl md:text-5xl font-display font-bold text-white">Full-Stack Automation <br>&
+                            Digital Infrastructure.</h3>
+                    </div>
+                    <p class="text-gray-400 max-w-sm mb-2">If it can be built in Make or n8n, we can build it. From
+                        agentic reasoning to robust project management systems.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Agentic Workflows -->
+                    <div
+                        class="bg-navy p-8 rounded-2xl border border-white/5 hover:border-teal/50 transition-all group">
+                        <div
+                            class="w-12 h-12 bg-teal/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-3">Agentic Workflows</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Multi-step AI reasoning loops that think,
+                            adapt, and execute complex business decisions autonomously.</p>
+                    </div>
+
+                    <!-- PM Automation -->
+                    <div
+                        class="bg-navy p-8 rounded-2xl border border-white/5 hover:border-cyan/50 transition-all group">
+                        <div
+                            class="w-12 h-12 bg-cyan/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-3">PM Systems</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Advanced automation for Asana, Monday, and
+                            Trello. Synchronized data across your entire project stack.</p>
+                    </div>
+
+                    <!-- Make/n8n Architecture -->
+                    <div
+                        class="bg-navy p-8 rounded-2xl border border-white/5 hover:border-lime/50 transition-all group">
+                        <div
+                            class="w-12 h-12 bg-lime/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6 text-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-3">Custom Loops</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">Complex deterministic logic built in Make.com
+                            and n8n. Reliable, scalable, and built for edge cases.</p>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div
+                        class="bg-navy p-8 rounded-2xl border border-white/5 hover:border-white/50 transition-all group">
+                        <div
+                            class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-3">Digital Presence</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed">High-performance SaaS websites, custom
+                            dashboards, and client portals integrated with your backend.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="py-12 border-y border-white/5 bg-navy">
+            <div class="container mx-auto px-6 overflow-hidden">
+                <div
+                    class="flex flex-wrap justify-center items-center gap-12 transition-all duration-700">
+                    <span class="text-white font-display font-black text-2xl tracking-tighter">N8N.IO</span>
+                    <span class="text-white font-display font-black text-2xl tracking-tighter">MAKE.COM</span>
+                    <span class="text-white font-display font-black text-2xl tracking-tighter">PYTHON</span>
+                    <span class="text-white font-display font-black text-2xl tracking-tighter">OPENAI</span>
+                    <span class="text-white font-display font-black text-2xl tracking-tighter">CLAUDE</span>
+                    <span class="text-white font-display font-black text-2xl tracking-tighter">SUPABASE</span>
+                    <span class="text-white font-display font-black text-2xl tracking-tighter">TYPEBOT</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scale-Specific Solutions -->
+        <section id="solutions" class="py-32 bg-white">
+            <div class="container mx-auto px-6 text-center mb-20 focus-target">
+                <h2 class="text-4xl font-display font-bold text-navy mb-4">Tailored Automation for Every Stage</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We don't believe in one-size-fits-all. Our solutions are
+                    built to match your specific scale and complexity.</p>
+            </div>
+            <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+                <!-- Small Business -->
+                <div
+                    class="p-8 rounded-2xl border border-gray-100 hover:border-teal hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-teal/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-teal group-hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Small Businesses</h3>
+                    <p class="text-gray-600 leading-relaxed">Streamlining routine work and establishing intelligent
+                        process consistency to let you focus on growth.</p>
+                    <a href="#case-studies" class="text-teal text-sm font-semibold mt-4 inline-block hover:underline">Reclaimed 50 hrs/month →</a>
+                </div>
+                <!-- Marketing Agencies -->
+                <div
+                    class="p-8 rounded-2xl border border-gray-100 hover:border-cyan hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-cyan/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan group-hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Marketing Agencies</h3>
+                    <p class="text-gray-600 leading-relaxed">Boosting campaign execution speed and audience targeting
+                        accuracy with proprietary AI frameworks.</p>
+                    <a href="#case-studies" class="text-cyan text-sm font-semibold mt-4 inline-block hover:underline">Lead leakage fixed →</a>
+                </div>
+                <!-- Enterprises -->
+                <div
+                    class="p-8 rounded-2xl border border-gray-100 hover:border-lime hover:shadow-2xl transition-all group">
+                    <div
+                        class="w-12 h-12 bg-lime/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-lime group-hover:text-navy transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Enterprises</h3>
+                    <p class="text-gray-600 leading-relaxed">Deep process optimization at scale with predictive
+                        analytics and cross-departmental automation.</p>
+                    <a href="#case-studies" class="text-lime text-sm font-semibold mt-4 inline-block hover:underline">Bypassed enterprise-grade firewalls →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Value Pillars -->
+        <section id="value" class="py-32 bg-navy text-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20">
+                <div class="flex flex-col justify-center">
+                    <div class="bg-teal/20 text-teal px-4 py-1 rounded-full text-xs font-bold w-fit mb-6">REVENUE GROWTH
+                    </div>
+                    <h2 class="text-4xl font-display font-bold mb-6">Hyper-Personalization <br>at Scale</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                        We leverage AI-powered personalization to transform your outbound marketing. Turn cold leads
+                        into warm conversations by tailoring every touchpoint to the individual.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>3x Increase in response rates <a href="#case-studies" class="text-teal/60 text-xs hover:text-teal ml-1">(see case study)</a></span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Automated lead scoring & qualification</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <div class="bg-lime/20 text-lime px-4 py-1 rounded-full text-xs font-bold w-fit mb-6">COST
+                        EFFICIENCY</div>
+                    <h2 class="text-4xl font-display font-bold mb-6">80% Reduction in <br>Manual Labor</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                        Eliminate manual data entry and routine administration. We build custom loops that handle the
+                        repetitive tasks, freeing your team for high-value work.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Zero-error data processing <a href="#case-studies" class="text-lime/60 text-xs hover:text-lime ml-1">(see case study)</a></span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-lime" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>24/7 autonomous operations</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-16 text-center col-span-2">
+                <p class="text-gray-400 mb-6 text-lg">Stop leaving ROI on the table. Get a free automation audit — no commitment, just clarity.</p>
+                <a href="https://cal.com/sharif-6p34nh/30min"
+                    class="inline-block bg-lime text-navy px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform">Claim Your Free Audit Call</a>
+            </div>
+        </section>
+
+        <!-- Our Process -->
+        <section id="process" class="py-32 bg-white text-navy">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20">
+                    <h2 class="text-teal font-bold uppercase tracking-widest text-sm mb-4">How We Work</h2>
+                    <h3 class="text-4xl font-display font-bold text-navy">The Optimization Loop</h3>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-12 relative">
+                    <!-- Step 1 -->
+                    <div class="relative z-10 text-center px-4">
+                        <div
+                            class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-navy text-teal text-2xl font-display font-bold mb-8 border-4 border-gray-50">
+                            01</div>
+                        <h4 class="text-xl font-bold mb-4 text-navy">Strategic Discovery</h4>
+                        <p class="text-gray-600">We analyze your bottlenecks and map out a high-ROI automation blueprint
+                            tailored to your stack.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative z-10 text-center px-4">
+                        <div
+                            class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-navy text-cyan text-2xl font-display font-bold mb-8 border-4 border-gray-50">
+                            02</div>
+                        <h4 class="text-xl font-bold mb-4 text-navy">Rapid Integration</h4>
+                        <p class="text-gray-600">Our engineers build and deploy your custom loops in Make, n8n, or
+                            custom code with minimal disruption.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative z-10 text-center px-4">
+                        <div
+                            class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-navy text-lime text-2xl font-display font-bold mb-8 border-4 border-gray-50">
+                            03</div>
+                        <h4 class="text-xl font-bold mb-4 text-navy">Infinite Scaling</h4>
+                        <p class="text-gray-600">We monitor, optimize, and expand your systems to handle growth while
+                            your overhead stays flat.</p>
+                    </div>
+
+                    <!-- Connecting Line -->
+                    <div class="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-gray-100 -z-0"></div>
+                </div>
+
+                <!-- Real Example Callout -->
+                <div class="mt-16 border-l-4 border-teal bg-navy/5 rounded-r-2xl px-8 py-6 max-w-2xl mx-auto">
+                    <p class="text-gray-500 text-sm font-bold uppercase tracking-widest mb-2">Real Example</p>
+                    <p class="text-navy text-lg italic">"We used this exact loop to slash hiring costs by 50% and reclaim 50 hours/month for a client's founding team."</p>
+                    <a href="#case-studies" class="text-teal text-sm font-semibold mt-3 inline-block hover:underline">See the full case study →</a>
+                </div>
+                <div class="text-center mt-12">
+                    <p class="text-gray-500 mb-6">This is exactly how we work — every time. Ready to put your business through the loop?</p>
+                    <a href="https://cal.com/sharif-6p34nh/30min"
+                        class="inline-block bg-navy text-white px-10 py-4 rounded-full font-bold hover:bg-navy-light transition-all">Book Your Discovery Session</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies + Reviews Section -->
+        <section id="case-studies" class="py-32 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-display font-bold text-navy mb-4">Real Results. Real Clients.</h2>
+                    <p class="text-gray-600">Case studies and reviews from live projects.</p>
+                </div>
+
+                <!-- Case Studies Grid -->
+                <div class="grid md:grid-cols-2 gap-8 mb-20">
+                    <!-- Case Study 1 -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="bg-teal/10 text-teal text-xs font-bold px-3 py-1 rounded-full">GOVERNMENT / DATA</span>
+                        <h3 class="text-xl font-bold text-navy mt-4 mb-4">Autonomous AI Scraper & Anti-Bot Bypass</h3>
+                        <p class="text-gray-500 text-sm mb-2"><strong class="text-navy">Challenge:</strong> Large-scale, continuous data extraction from heavily protected government portals.</p>
+                        <p class="text-gray-500 text-sm mb-2"><strong class="text-navy">Solution:</strong> Multi-threaded pipeline (Python, Playwright, Supabase) with AI agents using OpenAI Vision to bypass Cloudflare/hCaptcha autonomously.</p>
+                        <div class="bg-navy/5 rounded-xl p-4 mt-4">
+                            <span class="text-navy font-bold text-sm">Result: </span>
+                            <span class="text-gray-600 text-sm">Reliable, automated delivery of clean cloud-synced data — bypassing enterprise anti-bot protections entirely.</span>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2 -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="bg-cyan/10 text-cyan text-xs font-bold px-3 py-1 rounded-full">REAL ESTATE / SALES</span>
+                        <h3 class="text-xl font-bold text-navy mt-4 mb-4">AI-Powered Real Estate Sales Concierge</h3>
+                        <p class="text-gray-500 text-sm mb-2"><strong class="text-navy">Challenge:</strong> A static lead form was causing high lead leakage and delayed response times.</p>
+                        <p class="text-gray-500 text-sm mb-2"><strong class="text-navy">Solution:</strong> Multi-workflow conversational AI (Typebot, n8n, OpenAI) that scores leads, pushes to CRM, and triggers customized HTML brochures.</p>
+                        <div class="bg-navy/5 rounded-xl p-4 mt-4">
+                            <span class="text-navy font-bold text-sm">Result: </span>
+                            <span class="text-gray-600 text-sm">Transformed a static form into a 24/7 automated sales agent with instant customer support.</span>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 3 -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="bg-lime/10 text-lime text-xs font-bold px-3 py-1 rounded-full">HR / OPERATIONS</span>
+                        <h3 class="text-xl font-bold text-navy mt-4 mb-4">End-to-End Recruitment Pipeline</h3>
+                        <p class="text-gray-500 text-sm mb-2"><strong class="text-navy">Challenge:</strong> Hiring processes were consuming 40+ hours a month in administrative bloat.</p>
+                        <p class="text-gray-500 text-sm mb-2"><strong class="text-navy">Solution:</strong> Automated system to collect data, auto-score applicants, and trigger custom interview sequences.</p>
+                        <div class="bg-navy/5 rounded-xl p-4 mt-4">
+                            <span class="text-teal font-bold text-sm">↓ 50% hiring costs &nbsp;·&nbsp; </span>
+                            <span class="text-teal font-bold text-sm">+50 hrs/month reclaimed</span>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 4 -->
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <span class="bg-white border border-gray-200 text-gray-600 text-xs font-bold px-3 py-1 rounded-full">AI INFRASTRUCTURE</span>
+                        <h3 class="text-xl font-bold text-navy mt-4 mb-4">Custom Agentic Workflows</h3>
+                        <p class="text-gray-500 text-sm mb-2"><strong class="text-navy">Challenge:</strong> Client needed AI to handle complex, multi-step reasoning tasks beyond simple trigger-action logic.</p>
+                        <p class="text-gray-500 text-sm mb-2"><strong class="text-navy">Solution:</strong> Highly autonomous workflows using Claude Code and Antigravity, adapting to live data environments and executing advanced operational tasks.</p>
+                        <div class="bg-navy/5 rounded-xl p-4 mt-4">
+                            <span class="text-navy font-bold text-sm">Result: </span>
+                            <span class="text-gray-600 text-sm">A hands-off, self-correcting AI infrastructure that scales with the business.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client Reviews -->
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl font-display font-bold text-navy">What Clients Say</h3>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Chiel Nabuurs -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-teal mb-4 text-sm tracking-widest">★★★★★</div>
+                        <p class="text-gray-600 italic text-sm mb-6">"Sharif built the complete flow for my website SuperChatbots from start to finish — and the result is truly high quality. The automatic language and currency detection is perfectly integrated. The AI chatbot flow runs smoothly with no dead moments or errors. Exactly what you need for conversion. Top collaboration, reliable, and absolutely recommended."</p>
+                        <div class="font-bold text-navy text-sm">— Chiel Nabuurs</div>
+                        <div class="text-gray-400 text-xs mt-1">SuperChatbots</div>
+                    </div>
+                    <!-- Marlon -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-teal mb-4 text-sm tracking-widest">★★★★★</div>
+                        <p class="text-gray-600 italic text-sm mb-6">"Excellent work thank you for delivering what you promised. We will definitely be back for more. Sharif is a bright friendly person whose bubbly personality is a welcome change to most online collaborations. He communicates well and emphasizes delivery above everything."</p>
+                        <div class="font-bold text-navy text-sm">— Marlon</div>
+                    </div>
+                    <!-- Michaell -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-teal mb-4 text-sm tracking-widest">★★★★★</div>
+                        <p class="text-gray-600 italic text-sm mb-6">"Sharif did an excellent job using both N8N and Make.com in his workflow(s). A confidently delivered job, some technical challenges that he overcame quickly and it worked a treat."</p>
+                        <div class="font-bold text-navy text-sm">— Michaell</div>
+                    </div>
+                    <!-- Ivan -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-teal mb-4 text-sm tracking-widest">★★★★★</div>
+                        <p class="text-gray-600 italic text-sm mb-6">"Awesome job, very professional, 100% will reach out in the future. Consider OptimalLoop if you want a proper service completed."</p>
+                        <div class="font-bold text-navy text-sm">— Ivan</div>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center">
+                    <p class="text-gray-500 mb-6 text-lg">These clients trusted us first. You could be next.</p>
+                    <a href="https://cal.com/sharif-6p34nh/30min"
+                        class="bg-teal text-navy px-10 py-4 rounded-full font-bold hover:shadow-lg hover:shadow-teal/20 transition-all">Let's Build Your Success Story</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet the Founder -->
+        <section id="founder" class="py-32 bg-navy text-white overflow-hidden relative">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-teal/5 skew-x-12 translate-x-1/2"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="grid md:grid-cols-2 gap-16 items-center flex flex-col md:flex-row">
+                    <div class="relative group order-2 md:order-1">
+                        <div
+                            class="absolute -inset-4 bg-gradient-to-tr from-teal to-lime opacity-20 blur-2xl rounded-full group-hover:opacity-40 transition-opacity">
+                        </div>
+                        <div
+                            class="relative aspect-square rounded-3xl overflow-hidden border border-white/10 bg-navy-light max-w-md mx-auto">
+                            <img src="IMG_6855.jpg" alt="Sharif — Founder of OptimalLoop"
+                                style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position: center 15%; image-rendering: high-quality; filter: contrast(1.1) saturate(1.05) brightness(1.02);">
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <h2 class="text-teal font-bold uppercase tracking-widest text-sm mb-4">Meet the Architect</h2>
+                        <h3 class="text-4xl font-display font-bold mb-8 text-white">Personalized Innovation <br>by
+                            Sharif.
+                        </h3>
+                        <p class="text-gray-300 text-base leading-relaxed mb-6 font-medium">
+                            With 20+ systems shipped across real estate, government data pipelines, HR, and SaaS — and 1,000+ hours saved for clients:
+                        </p>
+                        <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                            I specialize in bridging the gap between complex business needs and deterministic
+                            automation.
+                            Whether it's building high-performance SaaS websites, complex Project Management systems
+                            (Asana, Monday), or cutting-edge Agentic Workflows—if it can be imagined in Make or n8n, I
+                            can build it.
+                        </p>
+                        <p class="text-gray-400 text-lg leading-relaxed mb-10">
+                            At OptimalLoop, we don't just sell tools; we architect solutions that scale with your
+                            ambition.
+                        </p>
+                        <div class="flex items-center space-x-6">
+                            <a href="https://www.linkedin.com/in/sharif-mohamed-sharif-bb3091176/" target="_blank"
+                                class="text-white hover:text-teal transition-colors flex items-center space-x-2">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                                <span class="font-bold">Connect on LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ROI Calculator -->
+        <section id="calculator" class="py-32 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="bg-gray-50 rounded-3xl p-12 shadow-inner border border-gray-100">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-display font-bold text-navy mb-4">Potential Savings Calculator</h2>
+                        <p class="text-gray-600">See how much time and money OptimalLoop can save you.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="space-y-8">
+                            <div>
+                                <label class="block text-sm font-bold text-navy mb-4">Monthly Labor Hours (Manual
+                                    Tasks)</label>
+                                <input type="range" min="10" max="1000" value="160" class="w-full accent-teal"
+                                    id="hoursInput">
+                                <div class="flex justify-between text-[10px] md:text-xs text-gray-500 mt-2">
+                                    <span>10h</span>
+                                    <span id="hoursDisplay" class="font-bold text-navy text-xs md:text-sm">160h</span>
+                                    <span>1000h</span>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-navy mb-4">Average Hourly Rate ($)</label>
+                                <input type="number" value="50"
+                                    class="w-full p-3 rounded-lg border border-gray-300 focus:border-teal outline-none"
+                                    id="rateInput">
+                            </div>
+                        </div>
+                        <div class="bg-navy rounded-2xl p-8 text-white flex flex-col justify-center text-center">
+                            <span class="text-teal text-sm font-bold uppercase tracking-widest mb-2">Estimated Annual
+                                Savings</span>
+                            <div class="text-5xl font-display font-extrabold mb-4" id="savingsDisplay">$153,600</div>
+                            <p class="text-gray-400 text-sm mb-6">Based on 80% automation efficiency.</p>
+                            <a href="https://cal.com/sharif-6p34nh/30min"
+                                class="bg-teal text-navy px-6 py-3 rounded-lg font-bold text-sm hover:shadow-lg hover:shadow-teal/20 transition-all">Book a call to unlock this →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-navy">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-teal font-bold uppercase tracking-widest text-sm mb-4">Get In Touch</h2>
+                <h3 class="text-4xl font-display font-bold text-white mb-4">Not Ready to Book Yet?</h3>
+                <p class="text-gray-400 max-w-xl mx-auto">No problem. Drop your details and we'll reach out. Or if you're ready to get started, book a call directly.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
+
+                <!-- Contact Form -->
+                <div class="bg-navy-light rounded-2xl p-8 border border-white/10">
+                    <h4 class="text-white font-bold text-xl mb-6">Send a Message</h4>
+                    <div id="form-success" class="hidden text-center py-8">
+                        <div class="w-16 h-16 bg-teal/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-bold text-xl mb-2">Message Sent!</h4>
+                        <p class="text-gray-400">We'll get back to you shortly.</p>
+                    </div>
+                    <form id="contact-form" action="https://formspree.io/f/xykbdrwr" method="POST" class="space-y-5">
+                        <div>
+                            <label class="block text-gray-400 text-sm font-semibold mb-2">Your Name</label>
+                            <input type="text" name="Name" placeholder="John Smith" required
+                                class="w-full bg-navy border border-white/10 text-white placeholder-gray-600 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-teal transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 text-sm font-semibold mb-2">Email Address</label>
+                            <input type="email" name="Email" placeholder="john@company.com" required
+                                class="w-full bg-navy border border-white/10 text-white placeholder-gray-600 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-teal transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 text-sm font-semibold mb-2">What are you looking to automate?</label>
+                            <select name="Topic"
+                                class="w-full bg-navy border border-white/10 text-gray-400 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-teal transition-colors">
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="Lead Generation & CRM">Lead Generation & CRM</option>
+                                <option value="Data Pipelines & Scraping">Data Pipelines & Scraping</option>
+                                <option value="AI Agents & Workflows">AI Agents & Workflows</option>
+                                <option value="Recruitment & HR">Recruitment & HR</option>
+                                <option value="Project Management">Project Management</option>
+                                <option value="Something else">Something else</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-400 text-sm font-semibold mb-2">Your Message</label>
+                            <textarea name="Message" rows="4" placeholder="Tell us about your current bottleneck..." required
+                                class="w-full bg-navy border border-white/10 text-white placeholder-gray-600 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-teal transition-colors resize-none"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-white text-navy font-bold py-3 rounded-lg hover:bg-gray-100 transition-colors text-sm">Send Message →</button>
+                    </form>
+                </div>
+
+                <!-- Book a Call -->
+                <div class="flex flex-col justify-between h-full space-y-8">
+                    <div class="bg-gradient-to-br from-teal/20 to-lime/10 border border-teal/30 rounded-2xl p-10 text-center">
+                        <div class="w-16 h-16 bg-teal/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-white font-display font-bold text-2xl mb-3">Book a Strategy Call</h4>
+                        <p class="text-gray-400 mb-8 leading-relaxed">30 minutes. No fluff. Walk away with a clear picture of what's possible for your business — and a roadmap to get there.</p>
+                        <a href="https://cal.com/sharif-6p34nh/30min"
+                            class="block bg-lime text-navy px-8 py-5 rounded-xl font-bold text-lg hover:scale-105 transition-transform">Book Your Free Strategy Call</a>
+                    </div>
+
+                    <div class="text-center">
+                        <p class="text-gray-500 text-sm mb-2">Or reach us directly at</p>
+                        <a href="mailto:optimalloop@optimalloop.com" class="text-teal hover:underline font-semibold">optimalloop@optimalloop.com</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-6 flex flex-col md:row justify-between items-center text-gray-500 text-sm">
+            <div class="flex items-center space-x-2 mb-6 md:mb-0">
+                <div class="w-6 h-6 rounded-full bg-gradient-to-br from-teal to-lime"></div>
+                <span class="text-navy font-display font-bold">OptimalLoop</span>
+            </div>
+            <div class="flex space-x-8 mb-6 md:mb-0">
+                <a href="privacy.html" class="hover:text-navy transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-navy transition-colors">Terms of Service</a>
+                <a href="https://www.linkedin.com/in/sharif-mohamed-sharif-bb3091176/"
+                    class="hover:text-navy transition-colors" target="_blank">LinkedIn</a>
+                <a href="mailto:optimalloop@optimalloop.com" class="hover:text-navy transition-colors">Email Us</a>
+            </div>
+            <div>&copy; 2026 OptimalLoop. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+        // ROI Calculator Logic
+        const hoursInput = document.getElementById('hoursInput');
+        const rateInput = document.getElementById('rateInput');
+        const hoursDisplay = document.getElementById('hoursDisplay');
+        const savingsDisplay = document.getElementById('savingsDisplay');
+
+        function calculateSavings() {
+            const hours = parseInt(hoursInput.value);
+            const rate = parseInt(rateInput.value) || 0;
+            hoursDisplay.innerText = hours + 'h';
+
+            // Formula: (Hours * Rate * 12 months) * 80% efficiency
+            const annualCost = hours * rate * 12;
+            const savings = Math.round(annualCost * 0.8);
+
+            savingsDisplay.innerText = '$' + savings.toLocaleString();
+        }
+
+        hoursInput.addEventListener('input', calculateSavings);
+        rateInput.addEventListener('input', calculateSavings);
+
+        // Animated Bar placeholders in Hero
+        setInterval(() => {
+            const bars = ['bar1', 'bar2', 'bar3'];
+            bars.forEach(id => {
+                const bar = document.getElementById(id);
+                const width = Math.floor(Math.random() * 60) + 40;
+                bar.style.width = width + '%';
+            });
+        }, 3000);
+
+        // Intersection Observer for fade-in elements
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Formspree AJAX submission — stay on page after submit
+        const contactForm = document.getElementById('contact-form');
+        const formSuccess = document.getElementById('form-success');
+
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const data = new FormData(contactForm);
+            const response = await fetch('https://formspree.io/f/xykbdrwr', {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+            if (response.ok) {
+                contactForm.classList.add('hidden');
+                formSuccess.classList.remove('hidden');
+            } else {
+                alert('Something went wrong. Please email us directly at optimalloop@optimalloop.com');
+            }
+        });
+    </script>
+</body>
+
+</html>
