@@ -7,6 +7,7 @@
     <title>OptimalLoop | Work that does itself</title>
     <meta name="description"
         content="AI Automation Agency optimizing operations, maximizing ROI, and reducing costs by up to 80%.">
+    <script src="i18n.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -91,9 +92,16 @@
                 <a href="#case-studies" class="hover:text-teal transition-colors">Case Studies</a>
                 <a href="#contact" class="hover:text-teal transition-colors">Contact</a>
             </div>
-            <a href="https://cal.com/sharif-6p34nh/30min"
-                class="bg-lime text-navy px-5 py-2 rounded-full font-bold text-sm hover:scale-105 transition-transform mr-2 md:mr-0">Book
-                a Call</a>
+            <div class="flex items-center ml-3">
+                <div class="flex items-center text-xs font-bold mr-3 md:mr-4" role="group" aria-label="Language">
+                    <button type="button" data-lang-btn="nl" class="text-gray-500 hover:text-teal transition-colors">NL</button>
+                    <span class="text-gray-600 mx-1">|</span>
+                    <button type="button" data-lang-btn="en" class="text-teal hover:text-teal transition-colors">EN</button>
+                </div>
+                <a href="https://cal.com/sharif-6p34nh/30min"
+                    class="bg-lime text-navy px-4 md:px-5 py-2 rounded-full font-bold text-xs md:text-sm whitespace-nowrap hover:scale-105 transition-transform mr-2 md:mr-0">Book
+                    a Call</a>
+            </div>
         </nav>
     </header>
 
@@ -716,8 +724,11 @@
             const annualCost = hours * rate * 12;
             const savings = Math.round(annualCost * 0.8);
 
-            savingsDisplay.innerText = '$' + savings.toLocaleString();
+            const nl = window.OptimalLoopI18n && OptimalLoopI18n.lang === 'nl';
+            savingsDisplay.innerText = (nl ? '€' : '$') + savings.toLocaleString(nl ? 'nl-NL' : 'en-US');
         }
+
+        document.addEventListener('ol:languagechange', calculateSavings);
 
         hoursInput.addEventListener('input', calculateSavings);
         rateInput.addEventListener('input', calculateSavings);
@@ -761,7 +772,7 @@
                 contactForm.classList.add('hidden');
                 formSuccess.classList.remove('hidden');
             } else {
-                alert('Something went wrong. Please email us directly at optimalloop@optimalloop.com');
+                alert(OptimalLoopI18n.t('Something went wrong. Please email us directly at optimalloop@optimalloop.com'));
             }
         });
     </script>
