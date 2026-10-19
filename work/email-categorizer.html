@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI email categorizer — OptimalLoop</title>
+<meta name="description" content="An AI email categorizer in Make.com: every email enriched, categorised and followed up the right way — filed, flagged in Slack or turned into ClickUp work.">
+<script src="../i18n.js"></script>
+<link rel="icon" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Manrope:wght@700;800&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+.case-head{padding-top:48px;padding-bottom:24px;display:flex;flex-direction:column;gap:20px}
+.crumb{font-size:14px;color:var(--dim)} .crumb a{color:var(--dim)}
+.case-head h1{margin:0;font-size:clamp(40px,5.5vw,64px);line-height:1.05;max-width:880px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:12px}
+.fact{background:var(--navy-2);border:1px solid var(--navy-3);border-radius:18px;padding:22px}
+.fact small{display:block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
+.fact p{margin:0;font-size:16px;line-height:1.6;color:#E6F1FF}
+.fact.res{background:rgba(100,255,218,.08);border-color:rgba(100,255,218,.35)} .fact.res small{color:var(--teal)}
+.fact.res p{font:800 22px/1.35 Manrope,sans-serif;color:var(--white)}
+.scn{background:var(--navy-4);border:1px solid var(--navy-3);border-radius:28px;overflow:hidden}
+.shots{display:flex;flex-direction:column;gap:28px}
+.shots figure{margin:0;display:flex;flex-direction:column;gap:12px}
+.shots img{display:block;width:100%;height:auto;border-radius:16px;border:1px solid var(--navy-3);background:#fff}
+.shots figcaption{font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="wrap top">
+  <a class="logo" href="../index.html">Optimal<span class="grad">Loop</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../work.html" aria-current="page">Work</a>
+    <a href="../about.html">About</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+  <div class="top-right">
+    <div class="lang" aria-label="Language"><button type="button" data-lang-btn="nl" aria-pressed="false">NL</button><button type="button" data-lang-btn="en" aria-pressed="true">EN</button></div>
+    <a class="btn-book sm" href="https://cal.com/sharif-6p34nh/30min" target="_blank" rel="noopener">Book a free call</a>
+  </div>
+</header>
+
+<main>
+  <section class="wrap case-head">
+    <div class="crumb"><a href="../work.html">Work</a> / AI email categorizer</div>
+    <h1>AI email categorizer</h1>
+    <p class="lead" style="margin:0">Every incoming email is enriched with company info, categorised by AI and followed up the right way — filed away, flagged in Slack, or turned into ClickUp work with a reply.</p>
+    <div class="facts">
+      <div class="fact"><small>Challenge</small><p>A busy inbox where important emails got buried between everything else.</p></div>
+      <div class="fact"><small>Built with</small><p>Make.com, OpenAI, Slack, ClickUp, email</p></div>
+      <div class="fact res"><small>Result</small><p>Every email sorted and followed up — automatically</p></div>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-top:24px;padding-bottom:40px">
+    <div class="scn" data-flow="email"></div>
+  </section>
+
+  <section class="wrap section" style="padding-top:60px">
+    <h2 class="h2">Inside the <span class="grad">real system.</span></h2>
+    <p class="lead">The actual scenario in Make.com.</p>
+    <div class="shots">
+      <figure><img src="../assets/screens/email-categorizer-scenario.png" alt="Make.com scenario: watch email, AI company info, AI categorise, router with four routes" loading="lazy"><figcaption>Watch email → categorise → follow up the right way.</figcaption></figure>
+    </div>
+  </section>
+
+  <a class="final" href="https://cal.com/sharif-6p34nh/30min" target="_blank" rel="noopener" style="margin-top:60px">
+    <span class="big"><span style="display:block">INBOX EATING</span><span style="display:block">YOUR WEEK?</span></span>
+    <span class="btn">Book a free 30-minute call</span>
+    <span class="micro">Free · Dutch or English · You leave with 3 automations mapped for your business</span>
+  </a>
+</main>
+
+<footer class="wrap foot">
+  <span>© OptimalLoop · Geleen, Limburg</span>
+  <nav aria-label="Footer">
+    <a href="../privacy.html">Privacy Policy</a>
+    <a href="../terms.html">Terms of Service</a>
+    <a href="https://www.linkedin.com/in/sharif-mohamed-sharif-bb3091176/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:optimalloop@optimalloop.com">Email</a>
+  </nav>
+</footer>
+
+<script src="../assets/scenario.js"></script>
+</body>
+</html>

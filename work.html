@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work — OptimalLoop</title>
+<meta name="description" content="Systems OptimalLoop has shipped for HR, real estate, government data and service businesses — the same building blocks now used for horeca in Limburg.">
+<script src="i18n.js"></script>
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Manrope:wght@700;800&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.proj{background:var(--navy-2);border:1px solid var(--navy-3);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px}
+.proj.hl{border:2px solid var(--teal)}
+.proj small{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--dim);text-transform:uppercase} .proj.hl small{color:var(--teal)}
+.proj h3{margin:0;font-size:26px}
+.proj p{margin:0;font-size:15px;line-height:1.6;color:var(--muted)}
+.proj .tools{font-size:13px;color:var(--dim)}
+.proj .res{margin-top:auto;padding-top:14px;border-top:1px solid var(--navy-3);font:800 17px/1.35 Manrope,sans-serif;color:var(--teal)}
+.proj .more{font-weight:700}
+.quotes-head{padding-top:90px;padding-bottom:40px}
+</style>
+</head>
+<body>
+
+<header class="wrap top">
+  <a class="logo" href="index.html">Optimal<span class="grad">Loop</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="work.html" aria-current="page">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="top-right">
+    <div class="lang" aria-label="Language"><button type="button" data-lang-btn="nl" aria-pressed="false">NL</button><button type="button" data-lang-btn="en" aria-pressed="true">EN</button></div>
+    <a class="btn-book sm" href="https://cal.com/sharif-6p34nh/30min" target="_blank" rel="noopener">Book a free call</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="wrap page-head">
+    <span class="eyebrow">Work</span>
+    <h1>Systems I’ve <span class="grad">shipped.</span></h1>
+    <p class="lead">Built for HR, real estate and service businesses — the same building blocks I now use for horeca.</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="wrap" style="padding-bottom:40px">
+    <div class="projects">
+      <article class="proj hl">
+        <small>HR · Operations</small>
+        <h3>Hiring system</h3>
+        <p>Applications land in ClickUp the second someone applies. Move a card to Interview 1 and the invite sends itself.</p>
+        <span class="tools">Tally · Make.com · ClickUp</span>
+        <div class="res">↓ 50% hiring costs · +50 hrs/month reclaimed</div>
+        <a class="more" href="work/hiring-system.html">Watch the system run →</a>
+      </article>
+      <article class="proj">
+        <small>Operations</small>
+        <h3>AI email categorizer</h3>
+        <p>Every incoming email is enriched with company info, categorised by AI and followed up the right way — filed away, flagged in Slack, or turned into ClickUp work with a reply.</p>
+        <span class="tools">Make.com · OpenAI · Slack · ClickUp</span>
+        <div class="res">Every email sorted and followed up — automatically</div>
+        <a class="more" href="work/email-categorizer.html">Watch the system run →</a>
+      </article>
+      <article class="proj">
+        <small>Real estate · Sales</small>
+        <h3>AI sales concierge</h3>
+        <p>A static lead form leaked leads. Now a conversation scores every lead, pushes it to the CRM and sends a tailored brochure.</p>
+        <span class="tools">Typebot · n8n · OpenAI</span>
+        <div class="res">A static form became a 24/7 automated sales agent with instant customer support</div>
+      </article>
+      <article class="proj">
+        <small>AI chatbot</small>
+        <h3>SuperChatbots flow</h3>
+        <p>The complete chatbot flow for a client’s website, from start to finish — with automatic language and currency detection.</p>
+        <div class="res">Runs smoothly, no dead moments or errors</div>
+      </article>
+      <article class="proj">
+        <small>Government · Data</small>
+        <h3>Autonomous data pipeline</h3>
+        <p>Continuous extraction from heavily protected government portals, running unattended.</p>
+        <span class="tools">Python · Playwright · Supabase</span>
+        <div class="res">Reliable, automated delivery of clean, cloud-synced data</div>
+      </article>
+      <article class="proj">
+        <small>AI infrastructure</small>
+        <h3>Custom agentic workflows</h3>
+        <p>AI that handles multi-step reasoning on live data — far beyond simple trigger-and-action.</p>
+        <span class="tools">Claude Code</span>
+        <div class="res">A hands-off, self-correcting AI infrastructure that scales with the business</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (verbatim) -->
+  <section class="wrap" style="padding-top:60px;padding-bottom:90px">
+    <h2 class="h2" style="margin-bottom:32px">What clients <span class="grad">say.</span></h2>
+    <div class="quotes">
+      <figure class="quote"><div class="stars">★★★★★</div><blockquote>“The AI chatbot flow runs smoothly with no dead moments or errors. Exactly what you need for conversion. Top collaboration, reliable, and absolutely recommended.”</blockquote><figcaption><b>Chiel Nabuurs</b> · SuperChatbots</figcaption></figure>
+      <figure class="quote"><div class="stars">★★★★★</div><blockquote>“Excellent work thank you for delivering what you promised. We will definitely be back for more.”</blockquote><figcaption><b>Marlon</b></figcaption></figure>
+      <figure class="quote"><div class="stars">★★★★★</div><blockquote>“A confidently delivered job, some technical challenges that he overcame quickly and it worked a treat.”</blockquote><figcaption><b>Michaell</b></figcaption></figure>
+      <figure class="quote"><div class="stars">★★★★★</div><blockquote>“Awesome job, very professional, 100% will reach out in the future.”</blockquote><figcaption><b>Ivan</b></figcaption></figure>
+    </div>
+  </section>
+
+  <a class="final" href="https://cal.com/sharif-6p34nh/30min" target="_blank" rel="noopener">
+    <span class="big"><span style="display:block">YOUR ADMIN</span><span style="display:block">COULD BE NEXT.</span></span>
+    <span class="btn">Book a free 30-minute call</span>
+    <span class="micro">Free · Dutch or English · You leave with 3 automations mapped for your business</span>
+  </a>
+</main>
+
+<footer class="wrap foot">
+  <span>© OptimalLoop · Geleen, Limburg</span>
+  <nav aria-label="Footer">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="https://www.linkedin.com/in/sharif-mohamed-sharif-bb3091176/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:optimalloop@optimalloop.com">Email</a>
+  </nav>
+</footer>
+</body>
+</html>
