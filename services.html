@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services — OptimalLoop</title>
+<meta name="description" content="Hiring, no-shows, rosters, invoices and reviews — automated for restaurants and cafés in Limburg. The admin runs itself, you run the floor.">
+<script src="i18n.js"></script>
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Manrope:wght@700;800&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.svc .card p+p{color:var(--text)}
+.svc .card .you{font-size:14px;color:var(--dim);border-top:1px solid var(--navy-3);padding-top:12px;margin-top:4px}
+.svc .card .you b{color:var(--teal);font-weight:800}
+.others{display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between;background:var(--navy-2);border:1px solid var(--navy-3);border-radius:28px;padding:36px}
+.others > div{flex:1 1 min(520px,100%);min-width:0}
+.others h2{margin:0 0 10px;font-size:30px} .others p{margin:0;font-size:16px;line-height:1.6;color:var(--muted)}
+.calc{display:flex;flex-wrap:wrap;gap:32px;background:var(--navy-2);border:1px solid var(--navy-3);border-radius:28px;padding:36px}
+.calc > div{flex:1 1 min(360px,100%);min-width:0}
+.calc .in{display:flex;flex-direction:column;gap:28px}
+.calc .range-meta{display:flex;justify-content:space-between;font-size:13px;color:var(--dim)} .calc .range-meta b{color:var(--white);font-size:15px}
+.calc .out{background:var(--navy);border:1px solid var(--navy-3);border-radius:22px;padding:34px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px}
+.calc .out .big{font:800 clamp(44px,6vw,64px)/1 Manrope,sans-serif;color:var(--white)}
+.calc .out .micro{max-width:300px}
+.trust{background:var(--navy-2);border-top:1px solid var(--navy-3);border-bottom:1px solid var(--navy-3)}
+.trust .wrap{padding-top:90px;padding-bottom:90px}
+.trust .card{background:var(--navy)}
+.trust .card h3{font-size:20px}
+</style>
+</head>
+<body>
+
+<header class="wrap top">
+  <a class="logo" href="index.html">Optimal<span class="grad">Loop</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="services.html" aria-current="page">Services</a>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="top-right">
+    <div class="lang" aria-label="Language"><button type="button" data-lang-btn="nl" aria-pressed="false">NL</button><button type="button" data-lang-btn="en" aria-pressed="true">EN</button></div>
+    <a class="btn-book sm" href="https://cal.com/sharif-6p34nh/30min" target="_blank" rel="noopener">Book a free call</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="wrap page-head">
+    <span class="eyebrow">Services</span>
+    <h1>Automation that gives you <span class="grad">your evenings back.</span></h1>
+    <p class="lead">The work that eats your week between services — handled before you open.</p>
+  </section>
+
+  <!-- THE FIVE SERVICES -->
+  <section class="wrap svc" style="padding-bottom:40px">
+    <div class="grid">
+      <div class="card hl">
+        <small>PROVEN · −50% COSTS</small>
+        <h3>Hiring</h3>
+        <p>Applications land on one board. Move a candidate, the interview invite sends itself.</p>
+        <p>Every application, from any job site or your own form, becomes a card with the answers filled in. Each stage you move a card to triggers the right message: the invite, the reminder, the polite no.</p>
+        <p class="you"><b>You decide:</b> who gets an interview. The system does everything around that decision.</p>
+      </div>
+      <div class="card">
+        <small>FOR HORECA</small>
+        <h3>No-shows</h3>
+        <p>WhatsApp reminders and a waitlist that refills cancelled tables on its own.</p>
+        <p>Guests get a friendly reminder the day before, with a one-tap confirm or cancel. A cancelled table goes straight to the waitlist, and the first guest to say yes gets it.</p>
+        <p class="you"><b>You decide:</b> the wording, the timing, and which tables are worth a deposit.</p>
+      </div>
+      <div class="card">
+        <small>FOR HORECA</small>
+        <h3>Rosters</h3>
+        <p>A schedule drafted from your expected covers, not from gut feeling.</p>
+        <p>Reservations and last year’s numbers become a draft roster that respects availability, contracts and rest times. The draft lands with you before the week starts.</p>
+        <p class="you"><b>You decide:</b> the final roster. You move names, the system checks the rules.</p>
+      </div>
+      <div class="card">
+        <small>FOR HORECA</small>
+        <h3>Invoices</h3>
+        <p>Supplier invoices read, checked and ready for your bookkeeper.</p>
+        <p>Invoices from your mailbox or a photo are read, matched to the supplier and checked against the agreed prices. Anything odd is flagged; the rest goes to the bookkeeper in one tidy batch.</p>
+        <p class="you"><b>You decide:</b> what gets paid. The chasing, sorting and typing is gone.</p>
+      </div>
+      <div class="card">
+        <small>FOR HORECA</small>
+        <h3>Reviews</h3>
+        <p>Every review answered in your tone. You approve with one tap.</p>
+        <p>New reviews get a draft reply in your voice. You get it on your phone: approve, tweak or rewrite. Negative reviews are flagged so you see them first.</p>
+        <p class="you"><b>You decide:</b> every word that goes out. Nothing is posted without your tap.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="wrap section">
+    <h2 class="h2">How we <span class="grad">work.</span></h2>
+    <p class="lead">Three steps. No jargon, no long project plans.</p>
+    <div class="steps">
+      <div class="step"><b>01</b><h3>We map where the hours go</h3><p>I come by, we walk through a normal week, and we map where the hours go. You leave with 3 automations that make sense for your business, and what each one would save.</p></div>
+      <div class="step"><b>02</b><h3>I build it into your tools</h3><p>I build the system in the tools you already use, test it with your real data, and switch it on without disrupting a single service. You get a walkthrough, not a manual.</p></div>
+      <div class="step"><b>03</b><h3>It keeps running, and grows with you</h3><p>Every run is logged. When the business changes, the system changes with it. Maintenance is optional, and I’m one message away when something needs adjusting.</p></div>
+    </div>
+  </section>
+
+  <!-- OTHER BUSINESSES -->
+  <section class="wrap" style="padding-top:60px;padding-bottom:40px">
+    <div class="others">
+      <div>
+        <h2>Also for other businesses.</h2>
+        <p>The same systems are built for HR teams, agencies and service businesses: hiring, inboxes, lead follow-up and data pipelines. Horeca is the focus, not the limit.</p>
+      </div>
+      <a class="btn-ghost" href="work.html">See the systems I’ve shipped →</a>
+    </div>
+  </section>
+
+  <!-- SAVINGS CALCULATOR -->
+  <section class="wrap section" id="calculator">
+    <h2 class="h2">What is the admin <span class="grad">costing you?</span></h2>
+    <p class="lead">Move the slider to the hours your team spends on manual admin each month.</p>
+    <div class="calc">
+      <div class="in">
+        <div class="field">
+          <label for="hoursInput">Hours a month spent on manual admin</label>
+          <input type="range" min="5" max="400" step="5" value="60" id="hoursInput">
+          <div class="range-meta"><span>5h</span><b id="hoursDisplay">60h</b><span>400h</span></div>
+        </div>
+        <div class="field">
+          <label for="rateInput">Average hourly cost (€)</label>
+          <input type="number" min="0" step="1" value="30" id="rateInput" inputmode="numeric">
+        </div>
+      </div>
+      <div class="out">
+        <span class="eyebrow">Estimated annual savings</span>
+        <div class="big" id="savingsDisplay">€ 17.280</div>
+        <p class="micro" style="margin:0">Based on 80% of that work being automated. An estimate, not a quote.</p>
+        <a class="btn-teal" style="margin-top:14px" href="https://cal.com/sharif-6p34nh/30min" target="_blank" rel="noopener">Book a call to map this out →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RELIABILITY + AVG -->
+  <section class="trust" style="margin-top:60px">
+    <div class="wrap">
+      <h2 class="h2" style="margin-bottom:40px">Built not to <span class="grad">break.</span></h2>
+      <div class="grid">
+        <div class="card"><h3>If a step fails, it recovers</h3><p>Failed steps are retried or routed to an error path. If something still breaks, I get the alert — not your guests.</p></div>
+        <div class="card"><h3>Every run is logged</h3><p>Each run leaves a full history, so you can see exactly what happened and when.</p></div>
+        <div class="card"><h3>Built with the AVG in mind</h3><p>Only the data that’s needed, kept only as long as it’s needed. A processing agreement on request.</p></div>
+        <div class="card"><h3>You own it</h3><p>Every system documented, with a recorded walkthrough. Maintenance is optional, never a lock-in.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <a class="final" href="https://cal.com/sharif-6p34nh/30min" target="_blank" rel="noopener">
+    <span class="big"><span style="display:block">LESS ADMIN.</span><span style="display:block">MORE FLOOR.</span></span>
+    <span class="btn">Book a free 30-minute call</span>
+    <span class="micro">Free · Dutch or English · You leave with 3 automations mapped for your business</span>
+  </a>
+</main>
+
+<footer class="wrap foot">
+  <span>© OptimalLoop · Geleen, Limburg</span>
+  <nav aria-label="Footer">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="https://www.linkedin.com/in/sharif-mohamed-sharif-bb3091176/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:optimalloop@optimalloop.com">Email</a>
+  </nav>
+</footer>
+
+<script>
+/* Savings calculator — same formula as the previous site: hours × rate × 12 months × 80% automated */
+(function(){
+  var hoursInput=document.getElementById('hoursInput'),rateInput=document.getElementById('rateInput');
+  var hoursDisplay=document.getElementById('hoursDisplay'),savingsDisplay=document.getElementById('savingsDisplay');
+  function calc(){
+    var hours=parseInt(hoursInput.value,10)||0,rate=parseInt(rateInput.value,10)||0;
+    hoursDisplay.textContent=hours+'h';
+    var savings=Math.round(hours*rate*12*0.8);
+    var nl=window.OptimalLoopI18n&&window.OptimalLoopI18n.lang==='nl';
+    savingsDisplay.textContent='€ '+savings.toLocaleString(nl?'nl-NL':'en-US');
+  }
+  hoursInput.addEventListener('input',calc);
+  rateInput.addEventListener('input',calc);
+  document.addEventListener('ol:languagechange',calc);
+  calc();
+})();
+</script>
+</body>
+</html>

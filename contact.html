@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — OptimalLoop</title>
+<meta name="description" content="Book a free 30-minute call or send a message. OptimalLoop automates hiring, no-shows, rosters, invoices and reviews for horeca in Limburg — Sharif comes by in person.">
+<script src="i18n.js"></script>
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Manrope:wght@700;800&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.page-head .book{display:flex;flex-direction:column;gap:14px;align-items:flex-start;margin-top:8px}
+.two{display:flex;flex-wrap:wrap;gap:32px;align-items:flex-start;padding-top:30px;padding-bottom:90px}
+.two > *{flex:1 1 min(420px,100%);min-width:0}
+.formcard{background:var(--navy-2);border:1px solid var(--navy-3);border-radius:28px;padding:36px;display:flex;flex-direction:column;gap:20px}
+.formcard h2{margin:0;font-size:26px}
+.formcard form{display:flex;flex-direction:column;gap:18px}
+.success{display:flex;flex-direction:column;gap:10px;align-items:flex-start;padding:10px 0}
+.success .tick{width:52px;height:52px;border-radius:50%;background:rgba(100,255,218,.15);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800}
+.success h3{margin:0;font-size:24px} .success p{margin:0;color:var(--muted)}
+.aside{display:flex;flex-direction:column;gap:16px}
+.aside h2{margin:0;font-size:34px;line-height:1.05}
+.aside p{margin:0;font-size:17px;line-height:1.6;color:var(--muted)}
+.aside ul{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.aside li{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;font-size:16px}
+.aside li span{color:var(--dim);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;min-width:84px}
+.aside li a{font-weight:700;word-break:break-all}
+.aside .visit{background:var(--navy-2);border:1px solid var(--navy-3);border-radius:22px;padding:22px 24px;margin-top:10px}
+.aside .visit strong{display:block;font-family:Manrope,sans-serif;font-size:20px;color:var(--white);margin-bottom:4px}
+</style>
+</head>
+<body>
+
+<header class="wrap top">
+  <a class="logo" href="index.html">Optimal<span class="grad">Loop</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+  <div class="top-right">
+    <div class="lang" aria-label="Language"><button type="button" data-lang-btn="nl" aria-pressed="false">NL</button><button type="button" data-lang-btn="en" aria-pressed="true">EN</button></div>
+    <a class="btn-book sm" href="https://cal.com/sharif-6p34nh/30min" target="_blank" rel="noopener">Book a free call</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO + BOOKING -->
+  <section class="wrap page-head">
+    <span class="eyebrow">Contact</span>
+    <h1>Let’s map <span class="grad">your week.</span></h1>
+    <div class="book">
+      <a class="btn-book" href="https://cal.com/sharif-6p34nh/30min" target="_blank" rel="noopener">Book a free 30-minute call</a>
+      <p class="micro" style="margin:0">Free · 30 minutes · Dutch or English · You leave with 3 automations mapped for your business</p>
+    </div>
+  </section>
+
+  <section class="wrap two">
+    <!-- FORM -->
+    <div class="formcard">
+      <h2>Send a message</h2>
+      <div id="form-success" class="success hide" role="status">
+        <div class="tick" aria-hidden="true">✓</div>
+        <h3>Message sent!</h3>
+        <p>Thanks — I’ll get back to you soon.</p>
+      </div>
+      <form id="contact-form" action="https://formspree.io/f/xykbdrwr" method="POST">
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input type="text" id="f-name" name="Name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Email address</label>
+          <input type="email" id="f-email" name="Email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="f-topic">What would you like to automate?</label>
+          <select id="f-topic" name="Topic">
+            <option value="" disabled selected>Select a topic</option>
+            <option value="Hiring">Hiring</option>
+            <option value="No-shows & reservations">No-shows &amp; reservations</option>
+            <option value="Rosters">Rosters</option>
+            <option value="Invoices & bookkeeping">Invoices &amp; bookkeeping</option>
+            <option value="Reviews">Reviews</option>
+            <option value="Something else">Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-message">Your message</label>
+          <textarea id="f-message" name="Message" rows="5" placeholder="Where do the hours go in your week?" required></textarea>
+        </div>
+        <button type="submit" class="btn-teal">Send message →</button>
+      </form>
+    </div>
+
+    <!-- NOT READY YET -->
+    <aside class="aside">
+      <h2>Not ready to book yet?</h2>
+      <p>No problem. Leave your details and I’ll get back to you. Or, if you’re ready to get started, book the call directly and we skip the back-and-forth.</p>
+      <ul>
+        <li><span>Email</span><a href="mailto:optimalloop@optimalloop.com">optimalloop@optimalloop.com</a></li>
+        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/sharif-mohamed-sharif-bb3091176/" target="_blank" rel="noopener">Sharif Mohamed Sharif</a></li>
+      </ul>
+      <div class="visit">
+        <strong>Geleen, Limburg — I come by in person</strong>
+        <span class="micro">Anywhere in Limburg, at a time that suits your service.</span>
+      </div>
+    </aside>
+  </section>
+
+  <a class="final" href="https://cal.com/sharif-6p34nh/30min" target="_blank" rel="noopener">
+    <span class="big"><span style="display:block">LESS ADMIN.</span><span style="display:block">MORE FLOOR.</span></span>
+    <span class="btn">Book a free 30-minute call</span>
+    <span class="micro">Free · Dutch or English · You leave with 3 automations mapped for your business</span>
+  </a>
+</main>
+
+<footer class="wrap foot">
+  <span>© OptimalLoop · Geleen, Limburg</span>
+  <nav aria-label="Footer">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="https://www.linkedin.com/in/sharif-mohamed-sharif-bb3091176/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:optimalloop@optimalloop.com">Email</a>
+  </nav>
+</footer>
+
+<script>
+/* Formspree AJAX submission — stay on the page after submit (same logic as the previous site) */
+(function(){
+  var form=document.getElementById('contact-form'),ok=document.getElementById('form-success');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=form.querySelector('button[type=submit]');btn.disabled=true;
+    fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){form.classList.add('hide');ok.classList.remove('hide');}
+        else{throw new Error('formspree');}
+      })
+      .catch(function(){
+        btn.disabled=false;
+        alert(window.OptimalLoopI18n.t('Something went wrong. Please email us directly at optimalloop@optimalloop.com'));
+      });
+  });
+})();
+</script>
+</body>
+</html>
