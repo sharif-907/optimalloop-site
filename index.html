@@ -42,7 +42,8 @@
 .band div{display:flex;justify-content:center;gap:40px;font-family:Manrope,sans-serif;font-weight:800;font-size:26px;color:var(--navy);text-transform:uppercase}
 
 /* ---------- Numbers ---------- */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.stats{display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px 56px}
+.stats > div{flex:0 1 auto}
 .stats .big{font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(60px,7vw,100px);line-height:1}
 .stats .lbl{font-size:17px;font-weight:600;color:var(--white)}
 
@@ -227,7 +228,7 @@
 </main>
 
 <footer class="wrap foot">
-  <span>© OptimalLoop · Geleen, Limburg</span>
+  <span>© OptimalLoop · Venlo, Limburg</span>
   <nav aria-label="Footer">
     <a href="privacy.html">Privacy Policy</a>
     <a href="terms.html">Terms of Service</a>

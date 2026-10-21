@@ -20,7 +20,8 @@
 .about-copy h1{margin:0;font-size:clamp(50px,7vw,100px);line-height:.96;letter-spacing:-.03em}
 .about-copy p{margin:0;font-size:18px;line-height:1.65;color:var(--muted)}
 .about-copy .links{display:flex;flex-wrap:wrap;gap:20px;align-items:center}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;padding-bottom:40px}
+.stats{display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px 56px;padding-bottom:40px}
+.stats > div{flex:0 1 auto}
 .stats .big{font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(52px,6vw,88px);line-height:1}
 .stats .lbl{font-size:17px;font-weight:600;color:var(--white)}
 .timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
@@ -97,7 +98,7 @@
 </main>
 
 <footer class="wrap foot">
-  <span>© OptimalLoop · Geleen, Limburg</span>
+  <span>© OptimalLoop · Venlo, Limburg</span>
   <nav aria-label="Footer">
     <a href="privacy.html">Privacy Policy</a>
     <a href="terms.html">Terms of Service</a>
