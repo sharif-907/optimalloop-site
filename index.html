@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OptimalLoop — Automation for restaurants &amp; cafés in Limburg</title>
-<meta name="description" content="Eight years on the restaurant floor, two years building automations. OptimalLoop automates hiring, no-shows, rosters, invoices and reviews for horeca in Limburg.">
+<title>OptimalLoop — One task off your plate, every week · horeca Limburg</title>
+<meta name="description" content="Pick the task that costs you the most time each week — shift swaps, group requests or the phone during service. Sharif comes by one afternoon and sets it up so it runs by itself. First month free, then €149 a month, only if it saves you two hours a week.">
 <script src="i18n.js"></script>
 <link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,14 +17,16 @@
 .hero-copy{flex:1 1 min(560px,100%);min-width:0;display:flex;flex-direction:column;gap:26px}
 .pill{display:inline-flex;align-self:flex-start;flex-wrap:wrap;gap:10px;align-items:center;border:1px solid var(--navy-3);background:var(--navy-2);border-radius:999px;padding:8px 16px 8px 8px;font-size:14px;font-weight:600}
 .pill b{background:var(--teal);color:var(--navy);border-radius:999px;padding:4px 10px;font-size:12px}
-.hero h1{margin:0;font-size:clamp(50px,7.4vw,108px);line-height:.94;letter-spacing:-.03em}
+.hero h1{margin:0;font-size:clamp(48px,7vw,104px);line-height:.94;letter-spacing:-.03em}
 .hero h1 span{display:block}
 .hero p.sub{margin:0;font-size:19px;line-height:1.65;color:var(--muted);max-width:580px}
+.hero .q{margin:0;font:800 22px/1.35 Manrope,sans-serif;color:var(--white);max-width:560px;border-left:4px solid var(--teal);padding-left:18px}
 .cta-row{display:flex;flex-wrap:wrap;gap:20px;align-items:center}
 .proof{display:flex;flex-wrap:wrap;gap:18px;align-items:center;background:var(--navy-2);border:1px solid var(--navy-3);border-radius:20px;padding:18px 22px;max-width:600px}
 .proof .num{font-family:Manrope,sans-serif;font-weight:800;font-size:40px;line-height:1;color:var(--teal)}
 .proof p{flex:1 1 260px;margin:0;font-size:15px;line-height:1.5;color:#E6F1FF}
 .proof strong{display:block;color:var(--white)}
+.proof a{font-size:13px;color:var(--dim)}
 .hero-art{flex:1 1 min(420px,100%);min-width:0;display:flex;justify-content:center}
 .orbit{position:relative;width:470px;max-width:100%;aspect-ratio:1/1}
 .orbit .ring{position:absolute;inset:0;border-radius:50%;border:2px dashed var(--teal);opacity:.6;animation:spin 60s linear infinite}
@@ -41,20 +43,57 @@
 .band{background:var(--teal);transform:rotate(-1.5deg);margin:0 -40px;padding:18px 0;overflow:hidden;white-space:nowrap}
 .band div{display:flex;justify-content:center;gap:40px;font-family:Manrope,sans-serif;font-weight:800;font-size:26px;color:var(--navy);text-transform:uppercase}
 
+/* ---------- The three tasks (illustrated) ---------- */
+.tasks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:18px}
+.task{background:var(--navy-2);border:1px solid var(--navy-3);border-radius:28px;padding:26px;display:flex;flex-direction:column;gap:14px}
+.task small{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--teal)}
+.task h3{margin:0;font-size:26px}
+.task > p{margin:0;font-size:15px;line-height:1.6;color:var(--muted)}
+.task .you{font-size:14px;color:var(--dim)} .task .you b{color:var(--white)}
+.mock{position:relative;margin-top:auto;background:var(--navy);border:1px solid var(--navy-3);border-radius:20px;padding:18px 16px 16px;display:flex;flex-direction:column;gap:10px;font-size:13.5px;line-height:1.4}
+.mock .ill{position:absolute;top:-10px;right:14px;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);background:var(--muted);border-radius:999px;padding:3px 9px}
+.mock .meta{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.bub{max-width:88%;padding:10px 13px;border-radius:16px;color:#E6F1FF}
+.bub.in{align-self:flex-start;background:var(--navy-3);border-bottom-left-radius:4px}
+.bub.out{align-self:flex-end;background:rgba(100,255,218,.14);border:1px solid rgba(100,255,218,.35);border-bottom-right-radius:4px}
+.bub b{display:block;font-size:11px;color:var(--dim);font-weight:700;margin-bottom:3px}
+.ok{align-self:flex-end;display:inline-flex;align-items:center;gap:8px;background:var(--teal);color:var(--navy);font-weight:800;font-size:13px;border-radius:999px;padding:9px 14px}
+.ok i{font-style:normal;width:18px;height:18px;border-radius:50%;background:var(--navy);color:var(--teal);display:inline-flex;align-items:center;justify-content:center;font-size:11px}
+.mail{background:var(--navy-3);border-radius:14px;padding:11px 13px;color:#E6F1FF}
+.mail b{display:block;color:var(--white)} .mail span{color:var(--muted);font-size:12.5px}
+.draft{border:1px dashed rgba(100,255,218,.5);border-radius:14px;padding:11px 13px;color:#E6F1FF}
+.draft b{display:block;font-size:11px;color:var(--teal);letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
+.call{display:flex;align-items:center;gap:10px;background:var(--navy-3);border-radius:14px;padding:10px 13px;color:#E6F1FF}
+.call i{font-style:normal;width:30px;height:30px;border-radius:50%;background:rgba(233,84,107,.2);color:#FF8A9B;display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:0 0 30px}
+.call span{color:var(--muted);font-size:12px;margin-left:auto;white-space:nowrap}
+/* one calm reveal when the section scrolls into view */
+@media (prefers-reduced-motion:no-preference){
+  .mock > :not(.ill){opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease}
+  .tasks.is-live .mock > :not(.ill){opacity:1;transform:none}
+  .tasks.is-live .mock > :nth-child(2){transition-delay:.1s} .tasks.is-live .mock > :nth-child(3){transition-delay:.5s}
+  .tasks.is-live .mock > :nth-child(4){transition-delay:.9s} .tasks.is-live .mock > :nth-child(5){transition-delay:1.3s} .tasks.is-live .mock > :nth-child(6){transition-delay:1.7s}
+}
+
+/* ---------- How it works ---------- */
+.steps4{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:16px}
+.steps4 div{background:var(--navy-2);border:1px solid var(--navy-3);border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:10px}
+.steps4 b{font:800 40px/1 Manrope,sans-serif;color:var(--teal)} .steps4 div:nth-child(2) b{color:var(--cyan)} .steps4 div:nth-child(3) b{color:var(--white)} .steps4 div:nth-child(4) b{color:var(--teal)}
+.steps4 h3{margin:0;font-size:21px} .steps4 p{margin:0;font-size:15px;line-height:1.6;color:var(--muted)}
+
+/* ---------- Price ---------- */
+.price{display:flex;flex-wrap:wrap;gap:32px;align-items:center;background:var(--navy-2);border:2px solid var(--teal);border-radius:32px;padding:40px}
+.price > div{flex:1 1 min(380px,100%);min-width:0}
+.price .amt{font:800 clamp(56px,7vw,96px)/1 Manrope,sans-serif;color:var(--white);letter-spacing:-.03em}
+.price .amt small{font:800 20px Manrope,sans-serif;color:var(--muted)}
+.price ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.price li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.5;color:#E6F1FF}
+.price li::before{content:"✓";flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:var(--teal);color:var(--navy);font-weight:800;font-size:12px;display:inline-flex;align-items:center;justify-content:center;margin-top:2px}
+
 /* ---------- Numbers ---------- */
 .stats{display:flex;flex-wrap:wrap;justify-content:space-between;gap:32px 56px}
 .stats > div{flex:0 1 auto}
 .stats .big{font-family:Manrope,sans-serif;font-weight:800;font-size:clamp(60px,7vw,100px);line-height:1}
 .stats .lbl{font-size:17px;font-weight:600;color:var(--white)}
-
-/* ---------- Scenario strip (starts when scrolled into view) ---------- */
-.flow-scroll{overflow-x:auto;padding:30px 6px 10px}
-.flow{display:flex;align-items:center;min-width:980px}
-.node{--c:var(--teal);width:104px;height:104px;border-radius:50%;flex:0 0 104px;display:flex;align-items:center;justify-content:center;text-align:center;font:800 14px/1.2 Manrope,sans-serif;background:var(--navy-2);color:#5C6F91;padding:8px}
-.wire{--c:var(--teal);height:6px;flex:1 1 auto;border-radius:3px;background:var(--navy-3)}
-.flow.is-live .node{animation:run 6s infinite} .flow.is-live .wire{animation:wire 6s infinite}
-@keyframes run{0%,100%{background:var(--navy-2);color:#5C6F91;box-shadow:none;transform:scale(1)}6%,26%{background:var(--c);color:var(--navy);box-shadow:0 0 34px var(--c);transform:scale(1.1)}}
-@keyframes wire{0%,100%{background:var(--navy-3)}6%,26%{background:var(--c);box-shadow:0 0 10px var(--c)}}
 
 /* ---------- Deck ---------- */
 .split{display:flex;flex-wrap:wrap;gap:56px;align-items:center;padding-top:60px;padding-bottom:60px}
@@ -74,7 +113,7 @@
 .trust .card{background:var(--navy)}
 .trust .card h3{font-size:20px}
 
-@media (max-width:640px){.chips{display:none}.band div{font-size:18px;gap:24px}}
+@media (max-width:640px){.chips{display:none}.band div{font-size:18px;gap:24px}.price{padding:28px}}
 </style>
 </head>
 <body>
@@ -98,19 +137,20 @@
   <!-- HERO -->
   <section class="wrap hero">
     <div class="hero-copy">
-      <div class="pill"><b>HORECA</b> Automation for restaurants &amp; cafés · Limburg</div>
-      <h1><span>The admin</span><span>runs itself.</span><span class="grad">You run the floor.</span></h1>
-      <p class="sub">Eight years on the restaurant floor, up to floor manager. The last two building automations for HR, real estate and SaaS teams. OptimalLoop now brings both together — for horeca.</p>
+      <div class="pill"><b>HORECA</b> For restaurant &amp; café owners · Limburg</div>
+      <h1><span>One task</span><span>off your plate.</span><span class="grad">Every week.</span></h1>
+      <p class="q">What costs you, as the owner, the most time every week — besides the work on the floor?</p>
+      <p class="sub">You pick that one task. I come by one afternoon, look along, and set it up so it runs by itself. You only approve. Eight years on the restaurant floor, up to floor manager; the last two building automations for HR, real estate and SaaS teams.</p>
       <div>
         <div class="cta-row">
           <a class="btn-book" href="https://cal.com/sharif-6p34nh/30min" target="_blank" rel="noopener">Book a free 30-min call</a>
-          <a href="work/hiring-system.html" style="font-weight:700">See a system run →</a>
+          <a href="#tasks" style="font-weight:700">See the three tasks →</a>
         </div>
-        <p class="micro" style="margin:12px 0 0">Free · 30 minutes · Dutch or English · You leave with 3 automations mapped for your business</p>
+        <p class="micro" style="margin:12px 0 0">Free · 30 minutes · Dutch or English · You leave knowing which task goes first</p>
       </div>
       <div class="proof">
-        <div class="num">−50%</div>
-        <p><strong>Hiring costs, with 50+ hours a month back.</strong>A hiring system I built — for the problem every kitchen knows: finding staff.</p>
+        <div class="num">38%</div>
+        <p><strong>of horeca owners name staff planning and swap requests among the processes that cost the most time.</strong><a href="https://files.exact.com/static/web/pdf/mkb-barometer/2026/Rapport%20MKB%20Barometer%202026%20NL%20-%20Horeca.pdf" target="_blank" rel="noopener">Exact MKB Barometer 2026, horeca edition, 192 respondents</a></p>
       </div>
     </div>
     <div class="hero-art">
@@ -118,10 +158,10 @@
         <div class="ring" aria-hidden="true"></div>
         <img src="sharif.jpg" alt="Sharif, founder of OptimalLoop" width="960" height="1200">
         <div class="chips" aria-hidden="true">
-          <span class="n"><i style="background:var(--teal)">Fewer no-shows</i></span>
-          <span class="e"><i style="background:var(--cyan)">Rosters</i></span>
-          <span class="s"><i style="background:#fff">Hiring</i></span>
-          <span class="w"><i style="background:var(--teal)">Reviews</i></span>
+          <span class="n"><i style="background:var(--teal)">Shift swaps</i></span>
+          <span class="e"><i style="background:var(--cyan)">Group requests</i></span>
+          <span class="s"><i style="background:#fff">The phone</i></span>
+          <span class="w"><i style="background:var(--teal)">You approve</i></span>
         </div>
         <div class="visit"><strong>I come by in person</strong><span>anywhere in Limburg</span></div>
       </div>
@@ -129,19 +169,91 @@
   </section>
 
   <div class="band" aria-hidden="true"><div>
-    <span>Fewer no-shows ✦</span><span>Rosters in minutes ✦</span><span>Staff hired faster ✦</span><span>Invoices booked ✦</span><span>Every review answered ✦</span>
+    <span>One task less ✦</span><span>Two hours a week back ✦</span><span>You only approve ✦</span><span>Nothing to link ✦</span><span>Stop any month ✦</span>
   </div></div>
 
-  <!-- WHAT I AUTOMATE -->
+  <!-- THE THREE TASKS -->
+  <section class="wrap section" id="tasks">
+    <h2 class="h2">Pick the task that <span class="grad">eats your week.</span></h2>
+    <p class="lead">Three tasks I take off your hands. You choose one; it works beside what you already use, with nothing to link. The screens below are illustrations of how it looks, not real data.</p>
+    <div class="tasks" id="tasksGrid">
+
+      <article class="task">
+        <small>TASK 1 · WHATSAPP</small>
+        <h3>Shift swaps and sick calls</h3>
+        <p>Your team sends swaps and sick calls to one WhatsApp number. A proposal comes back that fits the roster you already have. You approve it, the team is told.</p>
+        <p class="you"><b>You decide:</b> every swap. Nothing changes without your tap.</p>
+        <div class="mock" aria-label="Illustration of a shift swap on WhatsApp">
+          <span class="ill">Illustration</span>
+          <span class="meta">WhatsApp · Saturday 10:12</span>
+          <div class="bub in"><b>Noor</b>I’m sick, can’t make tonight’s shift (17:00–23:00). Sorry!</div>
+          <div class="bub out"><b>Proposal for you</b>Lisa is free and under her hours this week. Lisa takes Saturday 17:00–23:00?</div>
+          <span class="ok"><i>✓</i>Approve</span>
+          <div class="bub in"><b>Lisa</b>Got it, I’ll be there at 17:00 👍</div>
+        </div>
+      </article>
+
+      <article class="task">
+        <small>TASK 2 · EMAIL</small>
+        <h3>Group and party requests</h3>
+        <p>A request for a group or a party lands in your inbox. Within ten minutes a neat first reply is ready, with your own arrangements and prices. You read it and send it with one click.</p>
+        <p class="you"><b>You decide:</b> each reply goes out only after your click.</p>
+        <div class="mock" aria-label="Illustration of a group request email with a drafted reply">
+          <span class="ill">Illustration</span>
+          <span class="meta">Inbox · received 14:03</span>
+          <div class="mail"><b>Dinner for 24 people on 14 December?</b><span>Hi, we’re looking for a place for our team dinner, around 19:00. Do you have room and a set menu?</span></div>
+          <div class="draft"><b>Draft reply · ready 14:09</b>Thanks for thinking of us! On 14 December we have room for 24 from 19:00. Our group menu is 3 courses at €42,50 per person…</div>
+          <span class="ok"><i>✓</i>Approve &amp; send</span>
+        </div>
+      </article>
+
+      <article class="task">
+        <small>TASK 3 · PHONE</small>
+        <h3>The phone during service</h3>
+        <p>For venues where guests still call to book. A missed call during service gets a WhatsApp within a minute, so the guest can book without you leaving the floor.</p>
+        <p class="you"><b>You decide:</b> the wording, and which hours count as service.</p>
+        <div class="mock" aria-label="Illustration of a missed call followed up on WhatsApp">
+          <span class="ill">Illustration</span>
+          <div class="call"><i>↙</i>Missed call · 06-12 34 56 78<span>Friday 19:42</span></div>
+          <div class="bub out"><b>WhatsApp · 19:43</b>Sorry we missed you — it’s busy on the floor right now. Want to book a table? Reply with the date, time and number of guests.</div>
+          <div class="bub in"><b>Guest</b>Table for 4, tomorrow at 19:00 please</div>
+          <span class="ok"><i>✓</i>Confirm booking</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
   <section class="wrap section">
-    <h2 class="h2">What I automate <span class="grad">for horeca.</span></h2>
-    <p class="lead">The work that eats your week between services — handled before you open.</p>
-    <div class="grid">
-      <div class="card hl"><small>PROVEN · −50% COSTS</small><h3>Hiring</h3><p>Applications land on one board. Move a candidate, the interview invite sends itself.</p></div>
-      <div class="card"><small>FOR HORECA</small><h3>No-shows</h3><p>WhatsApp reminders and a waitlist that refills cancelled tables on its own.</p></div>
-      <div class="card"><small>FOR HORECA</small><h3>Rosters</h3><p>A schedule drafted from your expected covers, not from gut feeling.</p></div>
-      <div class="card"><small>FOR HORECA</small><h3>Invoices</h3><p>Supplier invoices read, checked and ready for your bookkeeper.</p></div>
-      <div class="card"><small>FOR HORECA</small><h3>Reviews</h3><p>Every review answered in your tone. You approve with one tap.</p></div>
+    <h2 class="h2">How it <span class="grad">works.</span></h2>
+    <p class="lead">Four steps. The only thing you need to bring is the answer to one question.</p>
+    <div class="steps4">
+      <div><b>01</b><h3>The question</h3><p>What costs you the most time every week, besides the work on the floor? That task goes first.</p></div>
+      <div><b>02</b><h3>One afternoon on site</h3><p>I come by, look along with you and set it up on the spot, beside what you already use. Nothing to link, nothing to migrate.</p></div>
+      <div><b>03</b><h3>It runs by itself</h3><p>From then on the task handles itself. You see a proposal and approve it. That’s your whole part.</p></div>
+      <div><b>04</b><h3>After a month, you judge</h3><p>Did it save you two hours a week? Then we continue. If not, you stop, and it costs you nothing.</p></div>
+    </div>
+  </section>
+
+  <!-- PRICE -->
+  <section class="wrap" style="padding-top:60px;padding-bottom:40px">
+    <div class="price">
+      <div>
+        <span class="eyebrow">The deal</span>
+        <div class="amt" style="margin:12px 0 6px">€149 <small>/ month</small></div>
+        <p style="margin:0;font-size:17px;line-height:1.6;color:var(--muted)">For one task, fully taken off your hands. Only if it demonstrably saves you two hours a week.</p>
+      </div>
+      <div>
+        <ul>
+          <li>No setup fee</li>
+          <li>First month free</li>
+          <li>Then €149 a month — only if it saves you two hours a week, otherwise you stop at no cost</li>
+          <li>Cancel any month</li>
+          <li>I come by in person, anywhere in Limburg</li>
+        </ul>
+        <a class="btn-book" style="display:inline-block;margin-top:26px" href="https://cal.com/sharif-6p34nh/30min" target="_blank" rel="noopener">Book a free 30-min call</a>
+      </div>
     </div>
   </section>
 
@@ -153,26 +265,6 @@
       <div><div class="big outline">1,000+</div><div class="lbl">hours handed back to clients</div></div>
       <div><div class="big" style="color:var(--teal)">5★</div><div class="lbl">client reviews</div></div>
     </div>
-  </section>
-
-  <!-- SCENARIO -->
-  <section class="wrap section">
-    <h2 class="h2">Watch it <span style="color:var(--teal)">light up.</span></h2>
-    <p class="lead" style="margin-bottom:24px">The hiring system, live. Your only job: drag the card.</p>
-    <div class="flow-scroll">
-      <div class="flow" id="flow" aria-hidden="true">
-        <div class="node" style="animation-delay:0s">Form</div>
-        <div class="wire" style="animation-delay:.4s"></div>
-        <div class="node" style="--c:var(--cyan);animation-delay:.8s">ClickUp card</div>
-        <div class="wire" style="--c:var(--cyan);animation-delay:1.2s"></div>
-        <div class="node" style="--c:#fff;animation-delay:1.6s">You drag it</div>
-        <div class="wire" style="animation-delay:2s"></div>
-        <div class="node" style="animation-delay:2.4s">Invite written</div>
-        <div class="wire" style="--c:var(--cyan);animation-delay:2.8s"></div>
-        <div class="node" style="--c:var(--cyan);animation-delay:3.2s">Sent + logged</div>
-      </div>
-    </div>
-    <a href="work/hiring-system.html" style="display:inline-block;margin-top:18px;font-weight:700">See every step of the real scenario →</a>
   </section>
 
   <!-- PORTFOLIO DECK -->
@@ -221,9 +313,9 @@
   </section>
 
   <a class="final" href="https://cal.com/sharif-6p34nh/30min" target="_blank" rel="noopener">
-    <span class="big"><span style="display:block">LESS ADMIN.</span><span style="display:block">MORE FLOOR.</span></span>
+    <span class="big"><span style="display:block">ONE TASK LESS.</span><span style="display:block">EVERY WEEK.</span></span>
     <span class="btn">Book a free 30-minute call</span>
-    <span class="micro">Free · Dutch or English · You leave with 3 automations mapped for your business</span>
+    <span class="micro">Free · Dutch or English · You leave knowing which task goes first</span>
   </a>
 </main>
 
@@ -238,11 +330,12 @@
 </footer>
 
 <script>
-/* Scenario strip: only animates while on screen */
+/* Task mockups: one calm reveal when scrolled into view */
 (function(){
-  var flow=document.getElementById('flow');
-  if(!('IntersectionObserver' in window)){flow.classList.add('is-live');return;}
-  new IntersectionObserver(function(es){es.forEach(function(e){flow.classList.toggle('is-live',e.isIntersecting);});},{threshold:.4}).observe(flow);
+  var grid=document.getElementById('tasksGrid');
+  if(!('IntersectionObserver' in window)){grid.classList.add('is-live');return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){grid.classList.add('is-live');io.disconnect();}});},{threshold:.2});
+  io.observe(grid);
 })();
 
 /* Card deck: button or swipe */
