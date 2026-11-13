@@ -461,8 +461,8 @@
         'How we': 'Zo werken',
         'work.': 'we.',
         'Three steps. No jargon, no long project plans.': 'Drie stappen. Geen jargon, geen lange projectplannen.',
-        'We map where the hours go': 'We brengen in kaart waar de uren heen gaan',
-        'I come by, we walk through a normal week, and we map where the hours go. You leave with 3 automations that make sense for your business, and what each one would save.': 'Ik kom langs, we lopen een normale week door en brengen in kaart waar de uren heen gaan. Je houdt 3 automatiseringen over die passen bij jouw zaak, en wat elk ervan zou besparen.',
+        'We map where the hours go': 'We zoeken uit waar de uren heen gaan',
+        'I come by, we walk through a normal week, and we map where the hours go. You leave with 3 automations that make sense for your business, and what each one would save.': 'Ik kom langs, we lopen een normale week door en zoeken uit waar de uren heen gaan. Je houdt 3 automatiseringen over die passen bij jouw zaak, en wat elk ervan zou besparen.',
         'I build it into your tools': 'Ik bouw het in jouw tools',
         'I build the system in the tools you already use, test it with your real data, and switch it on without disrupting a single service. You get a walkthrough, not a manual.': 'Ik bouw het systeem in de tools die je al gebruikt, test het met je echte data en zet het aan zonder één dienst te verstoren. Je krijgt een rondleiding, geen handleiding.',
         'It keeps running, and grows with you': 'Het blijft draaien, en groeit met je mee',
@@ -518,7 +518,7 @@
         'Book a free 30-minute call or send a message. OptimalLoop automates hiring, no-shows, rosters, invoices and reviews for horeca in Limburg — Sharif comes by in person.': 'Plan een gratis gesprek van 30 minuten of stuur een bericht. OptimalLoop automatiseert werving, no-shows, roosters, facturen en reviews voor horeca in Limburg — Sharif komt gewoon langs.',
         'Where do the hours go in your week?': 'Waar gaan de uren in jouw week heen?',
         'Let’s map': 'Laten we',
-        'your week.': 'jouw week in kaart brengen.',
+        'your week.': 'jouw week doorlopen.',
         'Send a message': 'Stuur een bericht',
         'Message sent!': 'Bericht verzonden!',
         'Thanks — I’ll get back to you soon.': 'Bedankt — ik kom snel bij je terug.',
@@ -653,7 +653,15 @@
         'Free · Dutch or English · You leave knowing which task goes first': 'Gratis · Nederlands of Engels · Je weet daarna welke klus als eerste gaat',
         'Start with one task.': 'Begin met één klus.',
         'The main offer: you pick the task that costs you the most time each week — shift swaps, group requests or the phone during service — and I take it off your hands. First month free, then €149 a month, only if it saves you two hours a week.': 'Het hoofdaanbod: jij kiest de klus die je elke week de meeste tijd kost — diensten ruilen, groepsaanvragen of de telefoon tijdens de service — en ik neem hem uit handen. Eerste maand gratis, daarna €149 per maand, alleen als het je twee uur per week scheelt.',
-        'See how it works →': 'Bekijk hoe het werkt →'
+        'See how it works →': 'Bekijk hoe het werkt →',
+
+        // One next step: a quarter of an hour outside service (2026-11-13)
+        'Plan a quarter of an hour': 'Plan een kwartier',
+        'Plan a quarter of an hour, outside service': 'Plan een kwartier, buiten de service',
+        'A quarter of an hour, outside service · at your place or by phone · you leave knowing which task goes first': 'Een kwartier, buiten de service · bij jou in de zaak of aan de telefoon · daarna weet je welke klus als eerste gaat',
+        'Plan a quarter of an hour →': 'Plan een kwartier →',
+        'Plan a quarter of an hour outside service, or send a message. OptimalLoop takes one weekly task off the hands of restaurant and café owners in Limburg. Sharif comes by in person.': 'Plan een kwartier buiten de service, of stuur een bericht. OptimalLoop neemt eigenaren van restaurants en cafés in Limburg elke week één klus uit handen. Sharif komt gewoon langs.',
+        'No problem. Leave your details and I’ll get back to you. Or plan a quarter of an hour straight away: outside service, at your place or by phone.': 'Geen probleem. Laat je gegevens achter en ik kom bij je terug. Of plan meteen een kwartier: buiten de service, bij jou in de zaak of aan de telefoon.'
     };
 
     var current = 'en';
