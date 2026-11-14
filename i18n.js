@@ -574,7 +574,7 @@
 
         // Main offer: one task less per week (2026-11-06)
         'OptimalLoop — One task off your plate, every week · horeca Limburg': 'OptimalLoop — Eén klus minder per week · horeca Limburg',
-        'Pick the task that costs you the most time each week — shift swaps, group requests or the phone during service. Sharif comes by one afternoon and sets it up so it runs by itself. First month free, then €149 a month, only if it saves you two hours a week.': 'Kies de klus die jou elke week de meeste tijd kost — diensten ruilen, groepsaanvragen of de telefoon tijdens de service. Sharif komt een middag langs en zet het zo op dat het vanzelf loopt. Eerste maand gratis, daarna €149 per maand, alleen als het je twee uur per week scheelt.',
+        'Pick the task that costs you the most time each week — shift swaps, group requests or the phone during service. Sharif comes by one afternoon and sets it up so it runs by itself. First month free, then €149 a month excl. VAT, only if it saves you two hours a week.': 'Kies de klus die jou elke week de meeste tijd kost — diensten ruilen, groepsaanvragen of de telefoon tijdens de service. Sharif komt een middag langs en zet het zo op dat het vanzelf loopt. Eerste maand gratis, daarna €149 per maand excl. btw, alleen als het je twee uur per week scheelt.',
         'For restaurant & café owners · Limburg': 'Voor eigenaren van restaurants & cafés · Limburg',
         'One task': 'Eén klus',
         'off your plate.': 'minder.',
@@ -641,18 +641,18 @@
         'After a month, you judge': 'Na een maand oordeel jij',
         'Did it save you two hours a week? Then we continue. If not, you stop, and it costs you nothing.': 'Scheelde het je twee uur per week? Dan gaan we door. Zo niet, dan stop je, en kost het je niets.',
         'The deal': 'De afspraak',
-        '/ month': '/ maand',
+        '/ month excl. VAT': '/ maand excl. btw',
         'For one task, fully taken off your hands. Only if it demonstrably saves you two hours a week.': 'Voor één klus, volledig uit handen genomen. Alleen als het je aantoonbaar twee uur per week scheelt.',
         'No setup fee': 'Geen opstartkosten',
         'First month free': 'Eerste maand gratis',
-        'Then €149 a month — only if it saves you two hours a week, otherwise you stop at no cost': 'Daarna €149 per maand — alleen als het je twee uur per week scheelt, anders stop je zonder kosten',
+        'Then €149 a month excl. VAT — only if it saves you two hours a week, otherwise you stop at no cost': 'Daarna €149 per maand excl. btw — alleen als het je twee uur per week scheelt, anders stop je zonder kosten',
         'Cancel any month': 'Maandelijks opzegbaar',
         'I come by in person, anywhere in Limburg': 'Ik kom gewoon langs, overal in Limburg',
         'ONE TASK LESS.': 'EÉN KLUS MINDER.',
         'EVERY WEEK.': 'ELKE WEEK.',
         'Free · Dutch or English · You leave knowing which task goes first': 'Gratis · Nederlands of Engels · Je weet daarna welke klus als eerste gaat',
         'Start with one task.': 'Begin met één klus.',
-        'The main offer: you pick the task that costs you the most time each week — shift swaps, group requests or the phone during service — and I take it off your hands. First month free, then €149 a month, only if it saves you two hours a week.': 'Het hoofdaanbod: jij kiest de klus die je elke week de meeste tijd kost — diensten ruilen, groepsaanvragen of de telefoon tijdens de service — en ik neem hem uit handen. Eerste maand gratis, daarna €149 per maand, alleen als het je twee uur per week scheelt.',
+        'The main offer: you pick the task that costs you the most time each week — shift swaps, group requests or the phone during service — and I take it off your hands. First month free, then €149 a month excl. VAT, only if it saves you two hours a week.': 'Het hoofdaanbod: jij kiest de klus die je elke week de meeste tijd kost — diensten ruilen, groepsaanvragen of de telefoon tijdens de service — en ik neem hem uit handen. Eerste maand gratis, daarna €149 per maand excl. btw, alleen als het je twee uur per week scheelt.',
         'See how it works →': 'Bekijk hoe het werkt →',
 
         // One next step: a quarter of an hour outside service (2026-11-13)
