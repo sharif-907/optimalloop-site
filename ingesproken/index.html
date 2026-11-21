@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Even ingesproken · Sharif van OptimalLoop</title>
+<meta name="description" content="Een spraakbericht van 40 seconden van Sharif uit Venlo, in plaats van een lange mail.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Manrope:wght@700;800&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+.note{max-width:640px;margin:0 auto;padding:28px 20px 72px;display:flex;flex-direction:column;gap:26px}
+.note .logo{align-self:flex-start}
+.who{display:flex;gap:16px;align-items:center}
+.who img{width:76px;height:76px;flex:0 0 76px;border-radius:50%;object-fit:cover;object-position:center 14%;border:3px solid var(--navy);box-shadow:0 0 0 2px var(--teal)}
+.who strong{display:block;font:800 18px Manrope,sans-serif;color:var(--white)}
+.who span{font-size:14px;color:var(--dim)}
+.note h1{margin:0;font-size:clamp(36px,9vw,56px);line-height:1;letter-spacing:-.03em}
+.player{background:var(--navy-2);border:1px solid var(--navy-3);border-radius:22px;padding:18px}
+.player audio{display:block;width:100%}
+.player audio[hidden]{display:none}
+.player .pending{margin:0;font-size:14px;color:var(--muted)}
+.transcript{display:flex;flex-direction:column;gap:10px}
+.transcript small{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.transcript p{margin:0;font-size:17px;line-height:1.7;color:var(--text)}
+.ask{background:var(--navy-2);border:2px solid var(--teal);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.ask p{margin:0;font:800 22px/1.3 Manrope,sans-serif;color:var(--white)}
+.ask span{font-size:15px;color:var(--muted)}
+.ask a.btn-teal{align-self:flex-start}
+.ask .mail{font-size:14px;color:var(--dim);word-break:break-all}
+.small-foot{font-size:13px;color:var(--dim);text-align:center}
+.small-foot a{color:var(--muted)}
+</style>
+</head>
+<body>
+<main class="note">
+  <a class="logo" href="../index.html">Optimal<span class="grad">Loop</span></a>
+
+  <div class="who">
+    <img src="../sharif.jpg" alt="Sharif van OptimalLoop" width="960" height="1200">
+    <div><strong>Sharif, OptimalLoop</strong><span>Venlo, Limburg</span></div>
+  </div>
+
+  <h1>Even ingesproken, <span class="grad">40 seconden.</span></h1>
+
+  <div class="player">
+    <!-- PLACEHOLDER until the recording arrives: remove the <p class="pending"> line and the hidden attribute, add ingesproken.mp3 next to this file. -->
+    <p class="pending">Het spraakbericht komt hier.</p>
+    <audio controls preload="metadata" hidden>
+      <source src="ingesproken.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <section class="transcript" aria-label="Uitgeschreven tekst">
+    <small>Liever lezen?</small>
+    <p>Hoi, met Sharif uit Venlo. Ik heb acht jaar in de horeca gewerkt, en wat ik het meest zag: eigenaren die naast de vloer nog een avond per week kwijt zijn aan het rooster, de inkoop of de mail.</p>
+    <p>Ik neem één van die klussen van je over. Jij kiest welke. Het kost honderdnegenenveertig euro per maand, exclusief btw. Scheelt het je na dertig dagen niet minstens twee uur per week, dan krijg je je geld terug.</p>
+    <p>Mijn enige vraag: welke klus kost jou de meeste tijd? Eén regel terug is genoeg. Succes, en een fijne dag.</p>
+  </section>
+
+  <div class="ask">
+    <p>Welke klus kost jou elke week de meeste tijd?</p>
+    <span>Antwoord gewoon op de mail. Eén regel is genoeg.</span>
+    <a class="btn-teal" href="mailto:optimalloop@optimalloop.com?subject=Mijn%20klus">Mail Sharif</a>
+    <span class="mail">optimalloop@optimalloop.com</span>
+  </div>
+
+  <p class="small-foot">OptimalLoop · Venlo, Limburg · KvK 96658517 · <a href="../privacy.html">Privacy</a></p>
+</main>
+</body>
+</html>
